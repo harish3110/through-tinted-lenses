@@ -44,7 +44,7 @@ The lectures taught by Jeremy, the book as a manual to wade through the 'frighte
 
 
 ---
-## My blog post series:
+## My blog post series
 
 There's definitely a self-centered motivation to write these blog posts. Following the advice by Rachel Thomas(co-founder of fast.ai) in her [blog post](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045), she encourages anyone on a learning path to put out blog posts in-order to maximize your learning.
 
