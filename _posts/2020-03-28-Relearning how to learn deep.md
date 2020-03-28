@@ -22,9 +22,7 @@ Being a self-learner, I learned how to code in Python, understood the fundamenta
 
 ## Enter Fastai
 
-> “There are Two Core Abilities for Thriving in the New Economy :
-- The ability to quickly master hard things.
-- The ability to produce at an elite level, in terms of both quality and speed.” ― Cal Newport
+> “There are Two Core Abilities for Thriving in the New Economy :1. The ability to quickly master hard things. 2. The ability to produce at an elite level, in terms of both quality and speed.” ― Cal Newport
 
 I heard about Fastai and Jeremy Howard from my friends around version 1 of the course. I pushed it aside as one of the many courses suggested by people in the field due to their inherent allegiance to it having taken it. But over time, on Twitter, LinkedIn, and other sources, it had reached a point that I couldn't not take a look at the course. So I finally succumbed to the pressure and started last year's [course](https://course.fast.ai/).
 
