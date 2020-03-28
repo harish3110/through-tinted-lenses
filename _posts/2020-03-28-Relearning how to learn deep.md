@@ -1,8 +1,8 @@
 ---
-toc: true
+toc: false
 layout: post
 description: Using Fastai to become a state-of-the-art deep learning practitioner!
-categories: [markdown]
+categories: [fastai, deep learning]
 title: Relearning how to learn, deep.
 
 ---
@@ -54,6 +54,6 @@ Being quarantined, I find this time to be the best opportunity to start my blog 
 
 The course is currently private but will made public and free for all like all courses by fast.ai. Until then and hopefully even then, I hope I can help wade students through the mazes of Deep Learning, Fast.ai style! So let's get into it!
 
-In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fastai/classification/2020/03/28/Getting-started-with-Fastai-V2.html), i'll provide an introduction to the fastai v2 library and build an image classifier on a well-known dataset. 
+In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fastai/classification/2020/03/29/Getting-started-with-Fastai-V2.html), i'll provide an introduction to the fastai v2 library and build an image classifier on a well-known dataset. 
 
 ---
