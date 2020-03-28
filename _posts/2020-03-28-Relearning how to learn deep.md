@@ -24,7 +24,7 @@ Being a self-learner, I learned how to code in Python, understood the fundamenta
 
 I heard about Fastai and Jeremy Howard from my friends around version 1 of the course. I pushed it aside as one of the many courses suggested by people in the field due to their inherent allegiance to it having taken it. But over time, on Twitter, LinkedIn, and other sources, it had reached a point that I couldn't not take a look at the course. So I finally succumbed to the pressure and started last year's [course](https://course.fast.ai/).
 
-![](images/fastai.png)
+![fastai logo](https://miro.medium.com/max/1128/1*H2bbbgCg4u71KsYay7eVhQ.png)
 
 In less than two weeks, I binged watch through the entire part 1! The course was nothing like I had taken  before! All the concepts explained intuitively in simple and easy manner and more importantly, everything taught was visualized through code and by building state-of-the-art models. Unfortunately, I couldn't put in the necessary focus and didn't follow through completely. But this time around I made sure to take a break in order to pursue the course this time around.
 
