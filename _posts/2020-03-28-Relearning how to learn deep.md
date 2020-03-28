@@ -1,18 +1,13 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: Using Fastai to become a state-of-the-art deep learning practitioner!
 categories: [markdown]
 title: Relearning how to learn, deep.
 
 ---
-# Relearning how to learn, deep.
-> Using Fastai to become a state-of-the-art deep learning practitioner!
-
----
 >“The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn. ”
 ― Alvin Toffler
-
 ---
 
 ## Fact: Deep learning is hard!
