@@ -12,15 +12,20 @@ title: Relearning how to learn, deep.
 
 ## Fact: Deep learning is hard!
 
-I have a background in Electronics Engineering and having studied in the sub-continent, the amount of exposure to programming was virtually non-existent. Since graduating, I have slowly transitioned my way into the field of data science and machine learning by starting from scratch and building block after block, the necessary skills to call myself a data scientist, and land a job in the field.
+I have a background in Electronics Engineering and having studied in the sub-continent, the amount of exposure to programming was virtually non-existent. Since graduating, I have slowly transitioned my way into the field of data science and machine learning. I had to start from scratch and building block after block all the necessary skills needed to call myself a capable data scientist, and successfully land myself a job in the field.
 
-Whenever I meet anyone from a non-ML background and tell them  I'm a data scientist, their response is almost always the same. They nod in appreciation and say something like, "That's the future!" and that "I'm on the right path!". And if they're a parent, holding to the Indian parent tag who takes the first opportunity to 'help mold' their child's future, would introduce me to their son/daughter and ask me to discuss the field with them. Then they begin asking questions about the area like self-driving cars and other popular fields and finally land on to the million-dollar question "Is it difficult to become a deep learning engineer?". To this, I always find myself lying and spout out of phrases like "it's easy" and "anyone can do it"! Whereas the fact of the matter is that it entirely isn't.
+Whenever I meet anyone from a non-ML background and tell them  I'm a data scientist, their response is almost always the same. They nod in appreciation and say something like, "That's the future!" and that "I'm on the right path!". And if they're a parent, holding to the Indian parent tag who takes the first opportunity to 'help mold' their child's future, would introduce me to their son/daughter and ask me to discuss the field with them. Then they begin asking questions about the areas like self-driving cars and other popular fields and finally land on to the million-dollar question. "Is it difficult to become a deep learning engineer?". To this, I always find myself lying and spout out of phrases like "it's easy" and "anyone can do it"! Whereas the fact of the matter is that it entirely isn't.
 
 Being a self-learner, I learned how to code in Python, understood the fundamental concepts of data science and machine learning by following an array of popular MOOCs such as Coursera, Udacity, etc. as well as completed certifications from reputed colleges in India. It has been an incredible journey of learning, but it has not been easy! There is always a huge learning curve, and even after you complete a course or certification, there's still that void of not having built anything meaningful. Every one of the courses makes a point of conveying the theory and underlying maths well but almost always fail at delivering to students the necessary tools to go ahead and build something meaningful. There's still that next step(s) needed to be taken by the student to further the knowledge learned in the course. It's not that it wasn't possible; the amount of work required to put into it was not straightforward!
 
 ---
 
 ## Enter Fastai
+
+> “There are Two Core Abilities for Thriving in the New Economy :
+  1. The ability to quickly master hard things.
+  2. The ability to produce at an elite level, in terms of both quality and speed.” 
+― Cal Newport
 
 I heard about Fastai and Jeremy Howard from my friends around version 1 of the course. I pushed it aside as one of the many courses suggested by people in the field due to their inherent allegiance to it having taken it. But over time, on Twitter, LinkedIn, and other sources, it had reached a point that I couldn't not take a look at the course. So I finally succumbed to the pressure and started last year's [course](https://course.fast.ai/).
 
