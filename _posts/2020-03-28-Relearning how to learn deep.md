@@ -61,4 +61,7 @@ The course is currently private but will made public and free for all like all c
 
 In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fastai/classification/2020/03/29/Getting-started-with-Fastai-V2.html), i'll provide an introduction to the fastai v2 library and build an image classifier on a well-known dataset. 
 
+> “Education is the kindling of a flame, not the filling of a vessel.” 
+― Socrates
+
 ---
