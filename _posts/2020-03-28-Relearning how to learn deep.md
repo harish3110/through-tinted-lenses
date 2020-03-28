@@ -34,6 +34,7 @@ I heard about Fastai and Jeremy Howard from my friends around version 1 of the c
 In less than two weeks, I binged watch through the entire part 1! The course was nothing like I had taken  before! All the concepts explained intuitively in simple and easy manner and more importantly, everything taught was visualized through code and by building state-of-the-art models. Unfortunately, I couldn't put in the necessary focus and didn't follow through completely. But this time around I made sure to take a break in order to pursue the course this time around.
 
 ---
+## ~~Fact: Deep learning is hard~~
 ## Fact: Deep learning is easy, if done right!
 
 The main idea of the [course](https://www.fast.ai/) and the [library](https://dev.fast.ai/) is to democratize this powerful tool of 'Deep Learning', such that it can be easily harnessed by people across all domains such that one apply the principles easily in their domain.
@@ -57,3 +58,5 @@ But aside the learning advantages, I would like to do my best in helping guide p
 Being quarantined, I find this time to be the best opportunity to start my blog by delving into depths of this fantastic deep-learning library!
 
 The course is currently private but will made public and free for all like all courses by fast.ai. Until then and hopefully even then, I hope I can help wade students through the mazes of Deep Learning, Fast.ai style! So let's get into it!
+
+---
