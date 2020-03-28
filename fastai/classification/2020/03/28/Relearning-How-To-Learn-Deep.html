@@ -137,28 +137,28 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Fact:Deep-Learning-is-hard!">Fact:Deep Learning is hard! </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Enter-Fastai">Enter Fastai </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Fact:Deep-Learning-is-hard!">Fact:Deep Learning is hard! </a></li>
+<li class="toc-entry toc-h2"><a href="#Enter-Fastai">Enter Fastai </a></li>
 <li class="toc-entry toc-h2"><a href="#Fact:-Deep-Learning-is-easy,-if-done-right!">Fact: Deep Learning is easy, if done right! </a></li>
-<li class="toc-entry toc-h2"><a href="#My-blog-posts:">My blog posts: </a></li>
+<li class="toc-entry toc-h2"><a href="#My-blog-posts">My blog posts </a></li>
 <li class="toc-entry toc-h2"><a href="#Intro-to-Fastai-V2-by-building-an-image-classifier!">Intro to Fastai V2 by building an image classifier! </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Importing-the-library-and-necessary-modules">Importing the library and necessary modules </a></li>
-<li class="toc-entry toc-h3"><a href="#About-the-dataset:">About the dataset: </a></li>
-<li class="toc-entry toc-h3"><a href="#Getting-and-exploring-the-dataset:">Getting and exploring the dataset: </a></li>
+<li class="toc-entry toc-h3"><a href="#About-the-dataset">About the dataset </a></li>
+<li class="toc-entry toc-h3"><a href="#Getting-and-exploring-the-dataset">Getting and exploring the dataset </a></li>
 <li class="toc-entry toc-h3"><a href="#The-DataBlock-API">The DataBlock API </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Visualizing-the-data:">Visualizing the data: </a></li>
+<li class="toc-entry toc-h4"><a href="#1.-Create-a-DataBlock:">1. Create a DataBlock: </a></li>
+<li class="toc-entry toc-h4"><a href="#2.-Call-the-dataloaders-method-on-your-data:">2. Call the dataloaders method on your data: </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#Visualizing-the-data">Visualizing the data </a></li>
 <li class="toc-entry toc-h3"><a href="#Building-the-model:">Building the model: </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Basic-Understanding-of-a-CNN:">Basic Understanding of a CNN: </a></li>
+<li class="toc-entry toc-h4"><a href="#Basic-understanding-of-CNN's">Basic understanding of CNN&#39;s </a></li>
 <li class="toc-entry toc-h4"><a href="#Transfer-Learning">Transfer Learning </a></li>
-<li class="toc-entry toc-h4"><a href="#Training-the-model">Training the model </a></li>
+<li class="toc-entry toc-h4"><a href="#Defining-the-learner">Defining the learner </a></li>
+<li class="toc-entry toc-h4"><a href="#Fine-tuning-pretrained-model">Fine tuning pretrained model </a></li>
 </ul>
 </li>
 </ul>
@@ -202,9 +202,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Enter-Fastai">
+<h2 id="Enter-Fastai">
 <a class="anchor" href="#Enter-Fastai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enter Fastai<a class="anchor-link" href="#Enter-Fastai"> </a>
-</h3>
+</h2>
 <p>I heard about Fastai and Jeremy Howard from my friends around version 1 of the course. I pushed it aside as one of the many courses suggested by people in the field due to their inherent allegiance to it having taken it. But over time, on Twitter, LinkedIn, and other sources, it had reached a point that I couldn't not take a look at the course. So I finally succumbed to the pressure and started last year's <a href="https://course.fast.ai/">course</a>.</p>
 <p><img src="/through-tinted-lenses/images/copied_from_nb/images/fastai.png" alt=""></p>
 <p>In less than two weeks, I binged watch through the entire part 1! The course was nothing like I had taken  before! All the concepts explained intuitively in simple and easy manner and more importantly, everything taught was visualized through code and by building state-of-the-art models. Unfortunately, I couldn't put in the necessary focus and didn't follow through completely. But this time around I made sure to take a break in order to pursue the course this time around.</p>
@@ -227,8 +227,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="My-blog-posts:">
-<a class="anchor" href="#My-blog-posts:" aria-hidden="true"><span class="octicon octicon-link"></span></a>My blog posts:<a class="anchor-link" href="#My-blog-posts:"> </a>
+<h2 id="My-blog-posts">
+<a class="anchor" href="#My-blog-posts" aria-hidden="true"><span class="octicon octicon-link"></span></a>My blog posts<a class="anchor-link" href="#My-blog-posts"> </a>
 </h2>
 <p>There's definitely a self-centered motivation to write these blog posts. Following the advice by Rachel Thomas(co-founder of fast.ai) in her <a href="https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045">blog post</a>, she encourages anyone on a learning path to put out blog posts in-order to maximize your learning.</p>
 <p>But aside the learning advantages, I would like to do my best in helping guide people entering this field on how best to navigate the myriad resources in the field and hopefully impart some of the knowledge learned along my journey until now.</p>
@@ -253,7 +253,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 <h3 id="Importing-the-library-and-necessary-modules">
 <a class="anchor" href="#Importing-the-library-and-necessary-modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing the library and necessary modules<a class="anchor-link" href="#Importing-the-library-and-necessary-modules"> </a>
 </h3>
@@ -291,8 +290,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="About-the-dataset:">
-<a class="anchor" href="#About-the-dataset:" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the dataset:<a class="anchor-link" href="#About-the-dataset:"> </a>
+<h3 id="About-the-dataset">
+<a class="anchor" href="#About-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the dataset<a class="anchor-link" href="#About-the-dataset"> </a>
 </h3>
 <p>Let's start off with the Flowers <a href="https://www.robots.ox.ac.uk/~vgg/data/flowers/">dataset</a> which is a common dataset for image classification tasks. The dataset is a collection of images of 102 different types of flowers which is nicely curated. The images of fairly reasonable size, shot in different angles and lighting conditions. In addition, there are categories that have large variations within the category and several very similar categories.</p>
 <p>Here's a <a href="https://www.robots.ox.ac.uk/~vgg/data/flowers/102/categories.html">list</a> of the 102 different categories of flowers in this dataset for you reference.</p>
@@ -304,8 +303,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Getting-and-exploring-the-dataset:">
-<a class="anchor" href="#Getting-and-exploring-the-dataset:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting and exploring the dataset:<a class="anchor-link" href="#Getting-and-exploring-the-dataset:"> </a>
+<h3 id="Getting-and-exploring-the-dataset">
+<a class="anchor" href="#Getting-and-exploring-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting and exploring the dataset<a class="anchor-link" href="#Getting-and-exploring-the-dataset"> </a>
 </h3>
 <p>Now that we have our arsenal setup and have an understanding on the data we are working. Let's download it and explore it.</p>
 <p>About 90% of the work done by data scientist revolves around gathering data in a well defined manner. For simplicity let's start of with commnly available datasets.</p>
@@ -1373,9 +1372,9 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's get a basic understanding of what's happening in the above code. Creating data which can be fed to a model requires two steps:</p>
-<ol>
-<li>
-<p>Create a DataBlock:</p>
+<h4 id="1.-Create-a-DataBlock:">
+<a class="anchor" href="#1.-Create-a-DataBlock:" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Create a DataBlock:<a class="anchor-link" href="#1.-Create-a-DataBlock:"> </a>
+</h4>
 <p>A <code>Datablock</code> can be considered as a series of sequential functions all collated into one function. For people who have used scikit-learn, this can be considered similar to a pipeline.</p>
 <p>The DataBlock API requires for mandatory fucntions  in order to get the input data in the desired format for model building and training:</p>
 <ul>
@@ -1396,14 +1395,10 @@ Getters are used to get the independant and dependant variables in the right ord
 Transforms are used to perform data augmentation techniques on our input data either on the entire data(<code>item_tfms</code>) on the CPU or on the data passed as batches(<code>batch_tfms</code>) when passing it through the architecture on the GPU. In this case we are just resizing all images to <code>224</code> which is mandatory as deep learning models need all our training images to be of the same size.</p>
 </li>
 </ul>
-</li>
-</ol>
-<ol>
-<li>
-<p>Call the dataloaders method on your data:</p>
+<h4 id="2.-Call-the-dataloaders-method-on-your-data:">
+<a class="anchor" href="#2.-Call-the-dataloaders-method-on-your-data:" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Call the dataloaders method on your data:<a class="anchor-link" href="#2.-Call-the-dataloaders-method-on-your-data:"> </a>
+</h4>
 <p>A <code>dataloaders</code> is a method called on the DataBlock where we pass in our dataframe <code>df</code> to perform all the steps mentioned in the DataBlock which finally returns the data in the required format for modeling.</p>
-</li>
-</ol>
 
 </div>
 </div>
@@ -1411,9 +1406,10 @@ Transforms are used to perform data augmentation techniques on our input data ei
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Visualizing-the-data:">
-<a class="anchor" href="#Visualizing-the-data:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualizing the data:<a class="anchor-link" href="#Visualizing-the-data:"> </a>
-</h4>
+<hr>
+<h3 id="Visualizing-the-data">
+<a class="anchor" href="#Visualizing-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualizing the data<a class="anchor-link" href="#Visualizing-the-data"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1467,8 +1463,8 @@ Transforms are used to perform data augmentation techniques on our input data ei
 <a class="anchor" href="#Building-the-model:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building the model:<a class="anchor-link" href="#Building-the-model:"> </a>
 </h3>
 <p>Let's build a deep learning model on our dataset using a <strong><em>Convolutional Neural Netwok(CNN)</em></strong> model.</p>
-<h4 id="Basic-Understanding-of-a-CNN:">
-<a class="anchor" href="#Basic-Understanding-of-a-CNN:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Understanding of a CNN:<a class="anchor-link" href="#Basic-Understanding-of-a-CNN:"> </a>
+<h4 id="Basic-understanding-of-CNN's">
+<a class="anchor" href="#Basic-understanding-of-CNN's" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic understanding of CNN's<a class="anchor-link" href="#Basic-understanding-of-CNN's"> </a>
 </h4>
 <p>Here's the general architecture of every CNN model</p>
 <p><img src="/through-tinted-lenses/images/copied_from_nb/images/cnn_understanding.jpeg" alt=""></p>
@@ -1501,6 +1497,8 @@ Transforms are used to perform data augmentation techniques on our input data ei
 </li>
 </ul>
 <p>The entire structure of the model built above is referred to as a model <code>architecture</code> in deep learning.</p>
+<p>Now, we can build a flowers classifier from scratch, but since we only have 8000 odd images for 102 different classes. We can safely say that we don't have enough data to build a nice model from scratch.</p>
+<p>Instead let's use the biggest weapon in the deep learning arsenal available at our disposal, <strong><em>Transfer Learning</em></strong>.</p>
 
 </div>
 </div>
@@ -1509,17 +1507,16 @@ Transforms are used to perform data augmentation techniques on our input data ei
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>Now let's move on building and training the model:</p>
-<p>We can build a flowers classifier from scratch, but since we have only 8000 odd images for 102 different classes, we can safely say that we don't have enough data to build a nice model from scratch.</p>
-<p>Instead let's use the biggest weapon in the deep learning arsenal available at our disposal, <strong><em>Transfer Learning</em></strong>.</p>
-<hr>
 <h4 id="Transfer-Learning">
 <a class="anchor" href="#Transfer-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transfer Learning<a class="anchor-link" href="#Transfer-Learning"> </a>
 </h4>
-<p><strong><em>Transfer Learning</em></strong> is a method which uses the work done by other researchers who spend days on end to build appropriate <code>architectures</code> which train on large datasets for specific tasks. For instance, the ImageNet dataset which consists of  1.3 million images of various sizes around 500 pixels across, in 1000 categories, takes a few days to train.</p>
+<p>Transfer Learning is a method which uses the work done by other researchers who spend days on end to build appropriate <code>architectures</code> which train on large datasets for specific tasks. For instance, the ImageNet dataset which consists of  1.3 million images of various sizes around 500 pixels across, in 1000 categories, takes a few days to train.</p>
 <p>The main idea is as follows, the ImageNet dataset has 1000 different everyday categories and the parameters and features it learns for each one of the categories can be applicable to make the building blocks of the flowers dataset we are working on. The initial <strong><em>feature extraction</em></strong> layers which learns simple features line lines, edges, circles etc. can be applicable to flowers as well and we can fine tune the final layers to distinguish between the different classes of flowers.</p>
 <p>The final output layer(which is trained on 1000 categories) also needs to be removed and replaced with the 102 different classes of flowers.</p>
 <hr>
+<h4 id="Defining-the-learner">
+<a class="anchor" href="#Defining-the-learner" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining the learner<a class="anchor-link" href="#Defining-the-learner"> </a>
+</h4>
 <p>In fastai, to build a model we use the <code>cnn_learner</code> class. We need to pass in the following details to the <code>cnn_learner</code> to train the model:</p>
 <ul>
 <li>
@@ -1824,8 +1821,8 @@ Callbacks:
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Training-the-model">
-<a class="anchor" href="#Training-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the model<a class="anchor-link" href="#Training-the-model"> </a>
+<h4 id="Fine-tuning-pretrained-model">
+<a class="anchor" href="#Fine-tuning-pretrained-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fine tuning pretrained model<a class="anchor-link" href="#Fine-tuning-pretrained-model"> </a>
 </h4>
 <p>Once we have created our learner based on a pretrained resnet34 model, lets train our learner on classifying the flowers. In fastai there's a leraner method specifically to quickly train a pretrained model called <code>fine_tune</code>.</p>
 <p><code>fine_tune</code> by default trains the <code>head</code> i.e the additional part to the model we added for our classification of 102 flowers for one eopch and then unfreezes the all the weights and optimizes the entire model including the weights in the strating phase.</p>
