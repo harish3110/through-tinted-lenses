@@ -22,11 +22,6 @@ Being a self-learner, I learned how to code in Python, understood the fundamenta
 
 ## Enter Fastai
 
-> “There are Two Core Abilities for Thriving in the New Economy :
-> 1. The ability to quickly master hard things. 
-> 2. The ability to produce at an elite level, in terms of both quality and speed.” 
-― Cal Newport
-
 I heard about Fastai and Jeremy Howard from my friends around version 1 of the course. I pushed it aside as one of the many courses suggested by people in the field due to their inherent allegiance to it having taken it. But over time, on Twitter, LinkedIn, and other sources, it had reached a point that I couldn't not take a look at the course. So I finally succumbed to the pressure and started last year's [course](https://course.fast.ai/).
 
 ![](images/fastai.png)
@@ -37,9 +32,14 @@ In less than two weeks, I binged watch through the entire part 1! The course was
 ## ~~Fact: Deep learning is hard~~
 ## Fact: Deep learning is easy, if done right!
 
+> “There are Two Core Abilities for Thriving in the New Economy :
+> 1. The ability to quickly master hard things. 
+> 2. The ability to produce at an elite level, in terms of both quality and speed.” 
+― Cal Newport
+
 The main idea of the [course](https://www.fast.ai/) and the [library](https://dev.fast.ai/) is to democratize this powerful tool of 'Deep Learning', such that it can be easily harnessed by people across all domains such that one apply the principles easily in their domain.
 
-The course challenges the normal way of learning by following a top-down approach to understanding deep learning. In comparison to every other DL course under the sun, this course definitely makes the field easy to approach and most importantly it makes the implementation of the models very very easy.
+The course challenges the normal way of learning by following a top-down approach to understanding deep learning. In comparison to every other DL course under the sun, this course definitely makes the field easy to approach and most importantly it makes the implementation of the models very very easy. Students taking the course learn to implement all the theoretical concepts learnt immeadiately with concrete examples rather than learn mathematical proofs. In a rapidly evolving field such as this, being able to learn and rapidly protype simultaneously is inavluable!
 
 Everything taught in this year's course is again application-driven and closely follows the book written by the founders of fastai, Jeremy, and Sylvain. The only prerequisites needed to start with the course are high school math and intermediate coding skills in python, which, to be honest, can be picked up along the way(I'll be sure to put up references for all in the end). This doesn't mean that the course if geared for beginners, on the contrary veterans and beginners in the field, will have a lot discover in the course as the slowly peel through the nuances of the library, the ingenious implementations of various well-known libraries by incorporating clever tricks and insights learned through experimentation!
 
