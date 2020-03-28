@@ -137,9 +137,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Fact:Deep-Learning-is-hard!">Fact:Deep Learning is hard! </a></li>
+<li class="toc-entry toc-h2"><a href="#Fact:Deep-learning-is-hard!">Fact:Deep learning is hard! </a></li>
 <li class="toc-entry toc-h2"><a href="#Enter-Fastai">Enter Fastai </a></li>
-<li class="toc-entry toc-h2"><a href="#Fact:-Deep-Learning-is-easy,-if-done-right!">Fact: Deep Learning is easy, if done right! </a></li>
+<li class="toc-entry toc-h2"><a href="#Fact:-Deep-learning-is-easy,-if-done-right!">Fact: Deep learning is easy, if done right! </a></li>
 <li class="toc-entry toc-h2"><a href="#My-blog-posts">My blog posts </a></li>
 <li class="toc-entry toc-h2"><a href="#Intro-to-Fastai-V2-by-building-an-image-classifier!">Intro to Fastai V2 by building an image classifier! </a>
 <ul>
@@ -188,8 +188,8 @@ window.onload = wrap_img;
 ― Alvin Toffler</p>
 </blockquote>
 <hr>
-<h2 id="Fact:Deep-Learning-is-hard!">
-<a class="anchor" href="#Fact:Deep-Learning-is-hard!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fact:Deep Learning is hard!<a class="anchor-link" href="#Fact:Deep-Learning-is-hard!"> </a>
+<h2 id="Fact:Deep-learning-is-hard!">
+<a class="anchor" href="#Fact:Deep-learning-is-hard!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fact:Deep learning is hard!<a class="anchor-link" href="#Fact:Deep-learning-is-hard!"> </a>
 </h2>
 <p>I have a background in Electronics Engineering and having studied in the sub-continent, the amount of exposure to programming was virtually non-existent. Since graduating, I have slowly transitioned my way into the field of data science and machine learning by starting from scratch and building block after block, the necessary skills to call myself a data scientist, and land a job in the field.</p>
 <p>Whenever I meet anyone from a non-ML background and tell them  I'm a data scientist, their response is almost always the same. They nod in appreciation and say something like, "That's the future!" and that "I'm on the right path!". And if they're a parent, holding to the Indian parent tag who takes the first opportunity to 'help mold' their child's future, would introduce me to their son/daughter and ask me to discuss the field with them. Then they begin asking questions about the area like self-driving cars and other popular fields and finally land on to the million-dollar question "Is it difficult to become a deep learning engineer?". To this, I always find myself lying and spout out of phrases like "it's easy" and "anyone can do it"! Whereas the fact of the matter is that it entirely isn't.</p>
@@ -209,8 +209,8 @@ window.onload = wrap_img;
 <p><img src="/through-tinted-lenses/images/copied_from_nb/images/fastai.png" alt=""></p>
 <p>In less than two weeks, I binged watch through the entire part 1! The course was nothing like I had taken  before! All the concepts explained intuitively in simple and easy manner and more importantly, everything taught was visualized through code and by building state-of-the-art models. Unfortunately, I couldn't put in the necessary focus and didn't follow through completely. But this time around I made sure to take a break in order to pursue the course this time around.</p>
 <hr>
-<h2 id="Fact:-Deep-Learning-is-easy,-if-done-right!">
-<a class="anchor" href="#Fact:-Deep-Learning-is-easy,-if-done-right!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fact: Deep Learning is easy, if done right!<a class="anchor-link" href="#Fact:-Deep-Learning-is-easy,-if-done-right!"> </a>
+<h2 id="Fact:-Deep-learning-is-easy,-if-done-right!">
+<a class="anchor" href="#Fact:-Deep-learning-is-easy,-if-done-right!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fact: Deep learning is easy, if done right!<a class="anchor-link" href="#Fact:-Deep-learning-is-easy,-if-done-right!"> </a>
 </h2>
 <p>The main idea of the <a href="https://www.fast.ai/">course</a> and the <a href="https://dev.fast.ai/">library</a> is to democratize this powerful tool of 'Deep Learning', such that it can be easily harnessed by people across all domains such that one apply the principles easily in their domain.</p>
 <p>The course challenges the normal way of learning by following a top-down approach to understanding deep learning. In comparison to every other DL course under the sun, this course definitely makes the field easy to approach and most importantly it makes the implementation of the models very very easy.</p>
@@ -1927,9 +1927,12 @@ Callbacks:
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that by using the power of transfer learning, in 2 lines of code and 3 steps of training(epochs) which took about 30 seconds to train on small GPU we are able to build a flowers classifier which can classifiy between 102 types of flowers with 96% accuracy!</p>
-<p>This is pretty amazing, considering if you give me 1000x the time(~ 1 hour) to learn to classifiy even 10 breeds of flowers and I'm sure it'll be one hell of a feat if acheived.</p>
-<p>This is a good starting point. This will act as our baseline model for future imporovements and experimentation. So lets save this model so that we can build on from here form next time.</p>
+<p>We can see that by using the power of transfer learning, in 2 lines of code and 3 steps of training(epochs) which took about 30 seconds to train on small GPU we are able to build a flowers classifier which can classifiy between 102 types of flowers with greater than 96% accuracy!</p>
+<p>This blows the original <a href="https://www.robots.ox.ac.uk/~vgg/publications/2008/Nilsback08/nilsback08.pdf">paper</a> out of the water which came out in 2008 which used a non DL approach to tackle this problem and recieved an accuracy of about 72.8%</p>
+<p><img src="/through-tinted-lenses/images/copied_from_nb/images/og_flowers_results.png" alt=""></p>
+<p>But this isn't really a fair comparison. So if we compare our basic model the current <a href="https://paperswithcode.com/sota/image-classification-on-flowers-102">leaderboard</a> for the flowers-102 dataset we can see that the best accuracy on the entire dataset is about 99.7%.</p>
+<p>So, this is a good starting point. This will act as our baseline model for future imporovements and experimentation in order to come closer to the current benchmark.</p>
+<p>So lets save this model so that we can build on from here form next time.</p>
 
 </div>
 </div>
