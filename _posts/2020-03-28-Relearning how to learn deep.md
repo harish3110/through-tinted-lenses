@@ -44,7 +44,7 @@ The lectures taught by Jeremy, the book as a manual to wade through the 'frighte
 
 
 ---
-## My blog posts
+## My blog post series:
 
 There's definitely a self-centered motivation to write these blog posts. Following the advice by Rachel Thomas(co-founder of fast.ai) in her [blog post](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045), she encourages anyone on a learning path to put out blog posts in-order to maximize your learning.
 
@@ -53,5 +53,7 @@ But aside the learning advantages, I would like to do my best in helping guide p
 Being quarantined, I find this time to be the best opportunity to start my blog by delving into depths of this fantastic deep-learning library!
 
 The course is currently private but will made public and free for all like all courses by fast.ai. Until then and hopefully even then, I hope I can help wade students through the mazes of Deep Learning, Fast.ai style! So let's get into it!
+
+In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fastai/classification/2020/03/28/Getting-started-with-Fastai-V2.html), i'll provide an introduction to the fastai v2 library and build an image classifier on a well-known dataset. 
 
 ---
