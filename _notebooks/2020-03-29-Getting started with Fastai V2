@@ -737,7 +737,7 @@
     }
    ],
    "source": [
-    "# hide input\n",
+    "#hide_input\n",
     "print(f'The main dataframe consists of {len(df)} labeled images.')"
    ]
   },
@@ -1524,6 +1524,17 @@
    "metadata": {},
    "source": [
     "We'll slowly build upon this and make this model better while learning more about building state-of-the-art models in the coming posts."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## Learning Resources:\n",
+    "\n",
+    "Python"
    ]
   },
   {
