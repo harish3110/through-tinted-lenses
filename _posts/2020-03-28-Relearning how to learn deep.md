@@ -66,3 +66,4 @@ In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fa
 ― Socrates
 
 ---
+Happy learning, stay at home and stay safe! :)
