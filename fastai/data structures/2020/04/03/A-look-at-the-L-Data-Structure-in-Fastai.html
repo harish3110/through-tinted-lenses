@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Understanding the functionalities of the Fastai core class L" />
 <meta property="og:description" content="Understanding the functionalities of the Fastai core class L" />
-<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html" />
-<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html" />
+<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html" />
+<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-03T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"Understanding the functionalities of the Fastai core class L","headline":"A look at Fastai’s ‘L’ Data Structure","dateModified":"2020-04-03T00:00:00-05:00","datePublished":"2020-04-03T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"Understanding the functionalities of the Fastai core class L","headline":"A look at Fastai’s ‘L’ Data Structure","dateModified":"2020-04-03T00:00:00-05:00","datePublished":"2020-04-03T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>A look at Fastai’s ‘L’ Data Structure | Through Tinted Lenses</title>
@@ -26,13 +26,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Understanding the functionalities of the Fastai core class L" />
 <meta property="og:description" content="Understanding the functionalities of the Fastai core class L" />
-<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html" />
-<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html" />
+<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html" />
+<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-03T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"Understanding the functionalities of the Fastai core class L","headline":"A look at Fastai’s ‘L’ Data Structure","dateModified":"2020-04-03T00:00:00-05:00","datePublished":"2020-04-03T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"Understanding the functionalities of the Fastai core class L","headline":"A look at Fastai’s ‘L’ Data Structure","dateModified":"2020-04-03T00:00:00-05:00","datePublished":"2020-04-03T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      12 min read
     
 </span></p>
 
@@ -116,19 +116,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/harish3110/through-tinted-lenses/tree/master/_notebooks/2020-04-03-A look at Fastai's L Data Structure.ipynb" role="button" target="_blank">
+    <a href="https://github.com/harish3110/through-tinted-lenses/tree/master/_notebooks/2020-04-03-A look at the L Data Structure in Fastai.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/through-tinted-lenses/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/harish3110/through-tinted-lenses/master?filepath=_notebooks%2F2020-04-03-A+look+at+Fastai%27s+L+Data+Structure.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/harish3110/through-tinted-lenses/master?filepath=_notebooks%2F2020-04-03-A+look+at+the+L+Data+Structure+in+Fastai.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/through-tinted-lenses/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/harish3110/through-tinted-lenses/blob/master/_notebooks/2020-04-03-A look at Fastai's L Data Structure.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/harish3110/through-tinted-lenses/blob/master/_notebooks/2020-04-03-A look at the L Data Structure in Fastai.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/through-tinted-lenses/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -137,7 +137,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Imports">Imports </a></li>
 <li class="toc-entry toc-h2"><a href="#What-is-the-'L'-data-structure?">What is the &#39;L&#39; data structure? </a></li>
 <li class="toc-entry toc-h2"><a href="#Creating-an-L">Creating an L </a></li>
 <li class="toc-entry toc-h2"><a href="#CollBase">CollBase </a></li>
@@ -153,11 +152,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#2.-Fastai-Specific-Methods">2. Fastai Specific Methods </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#2.1-_new">2.1 _new </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Soft-copy">Soft copy </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#2.1-_new">2.1 _new </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#3.-Normal-Methods">3. Normal Methods </a>
@@ -178,7 +173,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2020-04-03-A look at Fastai's L Data Structure.ipynb
+# file to edit: _notebooks/2020-04-03-A look at the L Data Structure in Fastai.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -201,29 +196,9 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Imports">
-<a class="anchor" href="#Imports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports<a class="anchor-link" href="#Imports"> </a>
-</h2>
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastcore.imports</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 </div>
     
@@ -508,6 +483,211 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#hide_output</span>
+<span class="n">help</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class L in module fastcore.foundation:
+
+class L(CollBase)
+ |  L(self, items=None, *rest, use_list=False, match=None)
+ |  
+ |  Behaves like a list of `items` but can also index with list of indices or masks
+ |  
+ |  Method resolution order:
+ |      L
+ |      CollBase
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(a, b)
+ |  
+ |  __addi__(a, b)
+ |  
+ |  __contains__(self, b)
+ |  
+ |  __eq__(self, b)
+ |      Return self==value.
+ |  
+ |  __getitem__(self, idx)
+ |      Retrieve `idx` (can be list of indices, or mask, or int) items
+ |  
+ |  __init__(self, items=None, *rest, use_list=False, match=None)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __invert__(self)
+ |  
+ |  __iter__(self)
+ |  
+ |  __mul__(a, b)
+ |  
+ |  __radd__(a, b)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __setitem__(self, idx, o)
+ |      Set `idx` (can be list of indices, or mask, or int) items to `o` (which is broadcast if not iterable)
+ |  
+ |  append(self, o)
+ |      Passthru to `list` method
+ |  
+ |  argwhere(self, f, negate=False, **kwargs)
+ |      Like `filter`, but return indices for matching items
+ |  
+ |  attrgot(self, k, default=None)
+ |      Create new `L` with attr `k` of all `items`
+ |  
+ |  cat(self: fastcore.foundation.L, dim=0)
+ |      Same as `torch.cat`
+ |  
+ |  clear(self)
+ |      Passthru to `list` method
+ |  
+ |  concat(self)
+ |      Concatenate all elements of list
+ |  
+ |  copy(self)
+ |      Same as `list.copy`, but returns an `L`
+ |  
+ |  count(self, o)
+ |      Passthru to `list` method
+ |  
+ |  cycle(self)
+ |      Same as `itertools.cycle`
+ |  
+ |  enumerate(self)
+ |      Same as `enumerate`
+ |  
+ |  filter(self, f, negate=False, **kwargs)
+ |      Create new `L` filtered by predicate `f`, passing `args` and `kwargs` to `f`
+ |  
+ |  index(self, value, start=0, stop=9223372036854775807)
+ |      Passthru to `list` method
+ |  
+ |  itemgot(self, *idxs)
+ |      Create new `L` with item `idx` of all `items`
+ |  
+ |  map(self, f, *args, **kwargs)
+ |      Create new `L` with `f` applied to all `items`, passing `args` and `kwargs` to `f`
+ |  
+ |  map_dict(self, f=&lt;function noop at 0xb1f55f488&gt;, *args, **kwargs)
+ |      Like `map`, but creates a dict from `items` to function results
+ |  
+ |  map_zip(self, f, *args, cycled=False, **kwargs)
+ |      Combine `zip` and `starmap`
+ |  
+ |  map_zipwith(self, f, *rest, cycled=False, **kwargs)
+ |      Combine `zipwith` and `starmap`
+ |  
+ |  pop(self, o=-1)
+ |      Passthru to `list` method
+ |  
+ |  product(self)
+ |      Product of the items
+ |  
+ |  reduce(self, f, initial=None)
+ |      Wrapper for `functools.reduce`
+ |  
+ |  remove(self, o)
+ |      Passthru to `list` method
+ |  
+ |  reverse(self)
+ |      Passthru to `list` method
+ |  
+ |  shuffle(self)
+ |      Same as `random.shuffle`, but not inplace
+ |  
+ |  sort(self, key=None, reverse=False)
+ |      Passthru to `list` method
+ |  
+ |  sorted(self, key=None, reverse=False)
+ |      New `L` sorted by `key`. If key is str then use `attrgetter`. If key is int then use `itemgetter`
+ |  
+ |  stack(self: fastcore.foundation.L, dim=0)
+ |      Same as `torch.stack`
+ |  
+ |  starmap(self, f, *args, **kwargs)
+ |      Like `map`, but use `itertools.starmap`
+ |  
+ |  sum(self)
+ |      Sum of the items
+ |  
+ |  tensored(self: fastcore.foundation.L)
+ |      `mapped(tensor)`
+ |  
+ |  unique(self)
+ |      Unique items, in stable order
+ |  
+ |  val2idx(self)
+ |      Dict from value to index
+ |  
+ |  zip(self, cycled=False)
+ |      Create new `L` with `zip(*items)`
+ |  
+ |  zipwith(self, *rest, cycled=False)
+ |      Create new `L` with `self` zip with each of `*rest`
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  range(a, b=None, step=None) from fastcore.foundation.NewChkMeta
+ |      Same as `range`, but returns an `L`. Can pass a collection for `a`, to use `len(a)`
+ |  
+ |  split(s, sep=None, maxsplit=-1) from fastcore.foundation.NewChkMeta
+ |      Same as `str.split`, but returns an `L`
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  __signature__ = &lt;Signature (self, items=None, *rest, use_list=False, m...
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from CollBase:
+ |  
+ |  __delitem__(self, i)
+ |  
+ |  __len__(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from CollBase:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1650,9 +1830,8 @@ _new(items, *args, **kwargs) method of fastcore.foundation.L instance
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Soft-copy">
-<a class="anchor" href="#Soft-copy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Soft copy<a class="anchor-link" href="#Soft-copy"> </a>
-</h4>
+<p>Using <code>_new</code> to create a soft copy of <code>a</code></p>
+
 </div>
 </div>
 </div>
@@ -2893,7 +3072,7 @@ concat(self)
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-Fastai's-L-Data-Structure.html" hidden></a>
+</script><a class="u-url" href="/through-tinted-lenses/fastai/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
