@@ -28,7 +28,7 @@ I first heard about Fastai and Jeremy Howard from my friends around version 1 of
 
 In less than two weeks, I binged watch through the entire part 1! The course was nothing like I had taken before. All the concepts explained intuitively and efficiently, and more importantly, everything taught was visualized through code and by building state-of-the-art models. I fell in love with the teaching methodology and with the community it had granered. I couldn't but feel envious of the new students taking up the course to learn deep learning as I was comparing it to myself starting out in ML a year ago and how a course like this would have been extremely helpful to my past self. 
 
-Despite my best efforts, I didn't feel like I put in the necessary commitment needed to make best use of the course due to other obligations. All this while I knew in the back of my head that i had to follow through on the course soon. So when I got the chance to take part in this year's course(fastai v4), I didn't think twice. I definitely wanted to take part in the course in person, but I'm equally glad to be taking part in the course virtually considering all that's going around in the world at the moment!
+Despite my best efforts, I didn't put in the necessary commitment needed to make the best use of the course. So when I got the chance to take part in this year's course(fastai v4), I didn't think twice. I definitely would have wanted to take part in the course in person, but I'm equally glad to be taking part in the course virtually considering all that's going around in the world at the moment!
 
 ---
 ## ~~Fact: Deep learning is hard~~
@@ -45,7 +45,7 @@ The course challenges the usual way of learning by following a top-down approach
 
 Everything taught in this year's course is again application-driven and closely follows the book written by the founders of fastai, Jeremy, and Sylvain. The only prerequisites needed to start with the course are high school math and intermediate coding skills in Python, which, to be honest, can be picked up along the way(I'll be sure to put up references for all in the end). This doesn't mean that the course is geared only for beginners. On the contrary, even veterans in the field will have a lot to discover and learn in the course.  The course gradually wades through the ingenious implementations, tricks, and insights gained through experimentation by the fastai team, which has led them to achieve state-of-the-art benchmark models by beating top companies with considerably limited compute resources as compared to big guns in the field. 
 
-The lectures taught by Jeremy, the book as a manual to wade through the 'frightening' depths of deep learning, a fantastic community of like-minded and extremely helpful peers, is a complete package and the perfect recipe to learn. I couldn't be more glad to be taking part in such an enriching learning experience, especially during these trying times, and despite it being virtual, I don't believe it has lost a beat.
+The lectures taught by Jeremy, the [book](https://github.com/fastai/fastbook) as a manual to wade through the 'frightening' depths of deep learning, the fantastic community of like-minded and extremely helpful peers, is a complete package and the perfect recipe to learn. 
 
 > "What I hope is that lots of people will realize that state-of-the-art results of deep learning are something they can achieve even if they're not a Stanford University deep learning PhD." — Jeremy Howard
 
