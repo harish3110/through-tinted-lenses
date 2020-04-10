@@ -141,7 +141,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Introduction">Introduction </a></li>
-<li class="toc-entry toc-h2"><a href="#Re-loading-the-model">Re-loading the model </a>
+<li class="toc-entry toc-h2"><a href="#Re-loading-the-baseline-model">Re-loading the baseline model </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Model-Interpretation">Model Interpretation </a></li>
 <li class="toc-entry toc-h3"><a href="#Model-Prediction">Model Prediction </a></li>
@@ -192,8 +192,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In my previous blog post <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html">"Building an image classifier using Fastai V2
 "</a>, I introduced the Fastai V2 library by building a baseline flower classifier model on the flowers-102 dataset.</p>
-<p>The baseline model achieved an accuracy of about 96.2% on the validation set which is definitley a good starting point. In this post i'll be using some of the techniques learnt in the <a href="">Fastai</a> to further improve the model by carefully training the model.</p>
-<p>The main aim of this post is to improve on my current baseline by employing some of the strategies taught in the Fastai course in order to reach the SOTA for the flowers-102 dataset which is an accuracy of 99.7%.</p>
+<p>The baseline model created achieved an accuracy of about 96.2% on the validation set. The main aim of this post is to improve on my current baseline by employing some of the strategies taught in the Fastai course in order to reach the SOTA for the flowers-102 dataset which is an accuracy of 99.7%.</p>
 <hr>
 
 </div>
@@ -236,8 +235,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Re-loading-the-model">
-<a class="anchor" href="#Re-loading-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Re-loading the model<a class="anchor-link" href="#Re-loading-the-model"> </a>
+<h2 id="Re-loading-the-baseline-model">
+<a class="anchor" href="#Re-loading-the-baseline-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Re-loading the baseline model<a class="anchor-link" href="#Re-loading-the-baseline-model"> </a>
 </h2>
 </div>
 </div>
@@ -245,10 +244,10 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the previous post, I saved the model created in order to re-load it again when needed. All that does is save the weights and bias matrices for each of the layers of the resnet-34 used. When we did a save of the model, behind the scenes Fastai saves the model in PyTorch models <code>state_dict</code> and stores it in a pickle file.</p>
+<p>In the previous post, I saved the model created in order to re-load it again when needed. A saved model basically saves the weights and bias matrices for each of the layers of the architecture trained for the specific task. When the model is saved, behind the scenes Fastai uses saves the models <code>state_dict</code> and stores it in a pickle file.</p>
 <p>To reload the model we could simply do: <code>learn.load('flowers-baseline')</code></p>
-<p>But hold on, it isn't that simple.</p>
-<p>To load all those weight matrices properly we need clearly define the architecture of the model as it was while creating the model. So we follow the same steps as we did last time to create the <code>DataBlock</code> then creating the <code>dataloaders</code> from it and specify the architecture we used by creating the <code>Learner</code>.</p>
+<p>But hold on, it isn't quite that simple.</p>
+<p>To load all those weight matrices properly we need to clearly define the architecture of the model as it was defined while training the model. So we follow the same steps as we did last time to create the <code>DataBlock</code>, then creating the <code>dataloaders</code> from it and finally specify the architecture we used by creating the <code>Learner</code>.</p>
 
 </div>
 </div>
@@ -366,7 +365,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To view the weight and bias matrices of our model we can check its <code>state_dict</code> as follows</p>
+<p>To view the weight and bias matrices of our model we can check its <code>state_dict</code> as follows:</p>
 <p><code>learn.model.state_dict()</code></p>
 
 </div>
@@ -376,8 +375,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
-<p><strong><em>Note:</em></strong> When we do a <code>model.save</code> behind the scenes Fastai is calling upon PyTorch to save this <code>state_dict</code>. Something along the lines of this:<code>torch.save(learn.model.state_dict(), 'checkpoint.pkl')</code>
-This is what is also happening when we use a pretrained model. We are basically taking the <code>state_dict</code> of a model trained for hours together and using it for our purposes!</p>
+<p><strong><em>Note:</em></strong> When we do a <code>model.save</code> behind the scenes Fastai is calling upon PyTorch to save this <code>state_dict</code>. Something along the lines of this:<code>torch.save(learn.model.state_dict(), 'checkpoint.pkl')</code></p>
+<p>This is what is also happening when we use a pretrained model. We are basically taking the <code>state_dict</code> of a model trained for hours together and using it for our purposes!</p>
 </blockquote>
 
 </div>
@@ -443,8 +442,9 @@ This is what is also happening when we use a pretrained model. We are basically 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One way to see how good your model is doing by using the confusion matrix which basically plots the number of correct predictions of the particular class as well which predictions were wrongly classified as the other as a square matrix.</p>
+<p>One way to see how good your model is doing by using the <code>confusion matrix</code> which basically plots the matrix of correct predictions of the each class as compared to others. This means we can see the classes that were mistaken as the other by looking at a single class.</p>
 <p>But in this case reading a confusion matrix would actually be pretty confusing since there are 102 different classes. So instead Fastai's <code>most_confused</code> will be used. This plots just the classes which were most frequently classified wrong which can be considered as a more refined and consise version of the confusion matrix.</p>
+<p>So since all we want to know is which classes were moslty classified we can use Fastai's <code>most_confused</code> method as follows:</p>
 
 </div>
 </div>
@@ -493,7 +493,7 @@ This is what is also happening when we use a pretrained model. We are basically 
 <h3 id="Model-Prediction">
 <a class="anchor" href="#Model-Prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Prediction<a class="anchor-link" href="#Model-Prediction"> </a>
 </h3>
-<p>Let's see how our model fares on new images taken from Google. I'm using an image of a sunflower here as sghown below.</p>
+<p>Let's see how our model fares on new images taken from Google. I'm using an image of a sunflower here:</p>
 
 </div>
 </div>
