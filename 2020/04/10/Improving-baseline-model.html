@@ -12103,7 +12103,7 @@ This is what is also happening when we use a pretrained model. We are basically 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="fit_one_cycle,-unfreeze-and-further-training">fit_one_cycle, unfreeze and further training<a class="anchor-link" href="#fit_one_cycle,-unfreeze-and-further-training"> </a></h2>
+<h2 id="1-cycle-training">1 cycle training<a class="anchor-link" href="#1-cycle-training"> </a></h2>
 </div>
 </div>
 </div>
@@ -12899,7 +12899,7 @@ Leslie Smith suggests that momentum and learning rate should be inversely propor
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So in order to find the ideal number of epochs to train Fastai suggests to employ the <code>fit_one_cycle</code> method, unfreeze and train a set number of epochs till you find that your model metric is still reducing and the training is going on well. The point where you see that metric is going wac</p>
+<p>So in order to find the ideal number of epochs to train Fastai suggests to employ the <code>fit_one_cycle</code> method, unfreeze and train a set number of epochs till you find that your model metric is still reducing and the training is going on well. The point where you see that metric is going wack and not training properly anymore is where you have gone too far and need to start training again till an epoch or two before!</p>
 
 </div>
 </div>
@@ -12913,7 +12913,7 @@ Leslie Smith suggests that momentum and learning rate should be inversely propor
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deeper-Architectures">Deeper Architectures<a class="anchor-link" href="#Deeper-Architectures"> </a></h2>
+<h2 id="Deeper-architectures">Deeper architectures<a class="anchor-link" href="#Deeper-architectures"> </a></h2>
 </div>
 </div>
 </div>
