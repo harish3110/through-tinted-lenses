@@ -735,8 +735,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the previous post, I explain how the images passed to the GPU needs to have the same dimensions so that they can be collated into tensors and effectively transfereend onto to GPU. Thus at the very least doing a <strong><em>Resize</em></strong> operation in the <code>item_tfms</code> when creating the DataBlock is mandatory.</p>
-<p>But if you think about it, simply resizing images is not a great idea. This might lead to producing croped off images, or images with empty zones i.e. images that aren't good.</p>
+<p>In the previous post, I explain how the images passed to the GPU needs to have the same dimensions so that they can be collated into tensors and effectively transferred onto to GPU. Thus at the very least doing a <strong><em>Resize</em></strong> operation in the <code>item_tfms</code> when creating the <code>DataBlock</code> is mandatory.</p>
+<p>But if you think about it, simply resizing images is not a great idea. This might lead to producing improper cropped images, or images with empty areas or only parts of an image.</p>
 <p>Also, doing all these transforms on a GPU is an expensive process, so finding an effective way to get this done by composing the augmentations to reduce the number of transforms being done would also be quite helpful</p>
 <p>So to get over these issues the Fastai library employs a method called <code>presizing</code>as follows:</p>
 <ol>
@@ -801,7 +801,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We see that the images are rectangle images with a fixed width of 500 and varying height. We can either work with rectangle images for our model but based on Jeremy's experimentation, in practice working with square images makes computation faster and produces almost similar results.</p>
-<p>So lets choose a size of 460*460 that's smaller than the original image and gives us enough wiggle room to work with for augmentations. Let's see how that resize looks like:</p>
+<p>So lets choose a size of 460*460 that's smaller than the original image and gives us enough wiggle room to work with for the augmentations. Let's see how that resize looks like:</p>
 <blockquote>
 <p><strong><em>Note:</em></strong> By default, Fastai does a random crop when calling the resize function.</p>
 </blockquote>
@@ -893,7 +893,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We then use <code>aug_transforms</code> which is a Fastai utility function to perform a list of transforms efficiently on images.</p>
+<p>We then use <code>aug_transforms</code> which is a Fastai utility function to perform a list of transforms efficiently on images as follows:</p>
+<p><code>batch_tfms=aug_transforms(size=224, min_scale=0.75)</code></p>
 <p>Here by choosing a <code>size</code> of '224' and <code>min_scale</code> != 1, We are telling Fastai to perform a random resized crop on the images to the final size of 224*224.</p>
 
 </div>
@@ -903,7 +904,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
-<p><strong><em>Note:</em></strong>: A <code>RandomResizedCrop</code> by default does a random crop of images in the training set and does a center crop of images in the validation set.</p>
+<p><strong><em>Note:</em></strong> A <code>RandomResizedCrop</code> by default does a random crop of images in the training set and does a center crop of images in the validation set.</p>
 </blockquote>
 
 </div>
@@ -1087,7 +1088,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that Presizing improved the accuracy of the model by almost 1% (from 96% to 97%), we can see that the validation loss is also reducing and so is the training loss.</p>
+<p>We can see that <code>Presizing</code> improved the accuracy of the model by almost 1% (from 96% to 97%), we can also see that the validation loss is also reducing and so is the training loss.</p>
 <blockquote>
 <p>In practice, Fastai's recommendation is to always use presizing as it siginficantly improves model performance as the images obtained by doing all the destructive augmentation steps in a composed and efficient manner leads to better quality images. Additionally, by composing these transforms together there is an additional advantage of the model training faster overall.</p>
 </blockquote>
