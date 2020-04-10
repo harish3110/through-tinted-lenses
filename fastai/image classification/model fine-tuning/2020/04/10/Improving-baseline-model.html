@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      18 min read
     
 </span></p>
 
@@ -1116,7 +1116,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We know that choosing a good learning rate for the training process is vital, till now we were using the default learning rate used in Fastai but let's dig deeper and choose a more suitable one for better training of the model.</p>
+<p>We know that choosing a good learning rate for the training process is vital. Till now we were using the default learning rate used in Fastai but let's dig deeper and choose a more suitable one for training the model more efficiently.</p>
 
 </div>
 </div>
@@ -1158,6 +1158,15 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fastai employs the popular <code>learning rate finder</code> trick as created by Leslie Smith to find an optimum learning rate to train a neural network model. In short the learning rate finder is a plot of the loss of our model over an epoch by gradually increasing our learning rate from a low value at each mini-batch to a very high value until the loss blows off. Then a smooth version of this plot is used to determine the region where the 'best learning' takes place and accordingly an ideal learning rate is decided upon.</p>
+<p>This is done in Fastai as follows:</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1235,9 +1244,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the above plot we can see that the plot has areas where loss is plateaud at first(i.e. no learning is taking place), then there is a gradual descent where the bulk of learning takes place and finally the loss shoots up and model goues out of wack!</p>
-<p>We would like to choose a learning rate somewhere in the region where there's the gradual descent, not too low where the training process is waning but somewhere in the middle.</p>
-<p>In this learning rate plot it appears that a learning rate around 3e-3 would be appropriate, so let's choose that.</p>
+<p>From the above plot we can see that the plot has areas where loss is plateaud at first(i.e. no learning is taking place), then there is a gradual descent where the bulk of learning takes place and finally the loss shoots up and model goes out of wack!</p>
+<p>We would like to choose a learning rate somewhere in the region where there's the gradual descent, not too low where the training process is waning but somewhere in the middle where the slope is high enough to induce a good learning for the model.</p>
+<p>In this learning rate plot it appears that a learning rate around <code>3e-3</code> has a good learning slope and would be appropriate, so let's choose that.</p>
 
 </div>
 </div>
@@ -1339,7 +1348,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><em>Note:</em></strong> : Everytime you change something in the model and need to retrain you need to reset learner.</p>
+<p><strong><em>Note:</em></strong> : Everytime you change something in the model and need to retrain again, you will need to reset the learner.</p>
 
 </div>
 </div>
