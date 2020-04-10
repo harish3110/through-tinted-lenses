@@ -143,13 +143,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Introduction">Introduction </a></li>
 <li class="toc-entry toc-h2"><a href="#Re-loading-the-baseline-model">Re-loading the baseline model </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Model-Interpretation">Model Interpretation </a></li>
-<li class="toc-entry toc-h3"><a href="#Model-Prediction">Model Prediction </a></li>
+<li class="toc-entry toc-h3"><a href="#Model-interpretation">Model interpretation </a></li>
+<li class="toc-entry toc-h3"><a href="#Model-prediction">Model prediction </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Presizing-and-fine_tune">Presizing and fine_tune </a></li>
 <li class="toc-entry toc-h2"><a href="#Learning-rate-finder">Learning rate finder </a></li>
-<li class="toc-entry toc-h2"><a href="#1-cycle-training">1 cycle training </a></li>
+<li class="toc-entry toc-h2"><a href="#1-Cycle-training">1 Cycle training </a></li>
 <li class="toc-entry toc-h2"><a href="#Discriminative-learning-rates">Discriminative learning rates </a></li>
 <li class="toc-entry toc-h2"><a href="#Number-of-epochs-of-training">Number of epochs of training </a></li>
 <li class="toc-entry toc-h2"><a href="#Deeper-architectures">Deeper architectures </a></li>
@@ -402,8 +402,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Model-Interpretation">
-<a class="anchor" href="#Model-Interpretation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Interpretation<a class="anchor-link" href="#Model-Interpretation"> </a>
+<h3 id="Model-interpretation">
+<a class="anchor" href="#Model-interpretation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model interpretation<a class="anchor-link" href="#Model-interpretation"> </a>
 </h3>
 </div>
 </div>
@@ -443,7 +443,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One way to see how good your model is doing by using the <code>confusion matrix</code> which basically plots the matrix of correct predictions of the each class as compared to others. This means we can see the classes that were mistaken as the other by looking at a single class.</p>
+<p>One way to see how good your model is doing by using the <code>confusion matrix</code> which basically plots the matrix of correct predictions of the each class as compared to others. This means we can see the classes that were mistaken as the other by looking at a single class. You can do so in Fastai by running the following code:</p>
+<p><code>interp.plot_confusion_matrix(figsize=(12,12), dpi=60)</code></p>
 <p>But in this case reading a confusion matrix would actually be pretty confusing since there are 102 different classes. So instead Fastai's <code>most_confused</code> will be used. This plots just the classes which were most frequently classified wrong which can be considered as a more refined and consise version of the confusion matrix.</p>
 <p>So since all we want to know is which classes were moslty classified we can use Fastai's <code>most_confused</code> method as follows:</p>
 
@@ -491,8 +492,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Model-Prediction">
-<a class="anchor" href="#Model-Prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Prediction<a class="anchor-link" href="#Model-Prediction"> </a>
+<h3 id="Model-prediction">
+<a class="anchor" href="#Model-prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model prediction<a class="anchor-link" href="#Model-prediction"> </a>
 </h3>
 <p>Let's see how our model fares on new images taken from Google. I'm using an image of a sunflower here:</p>
 
@@ -1375,8 +1376,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1-cycle-training">
-<a class="anchor" href="#1-cycle-training" aria-hidden="true"><span class="octicon octicon-link"></span></a>1 cycle training<a class="anchor-link" href="#1-cycle-training"> </a>
+<h2 id="1-Cycle-training">
+<a class="anchor" href="#1-Cycle-training" aria-hidden="true"><span class="octicon octicon-link"></span></a>1 Cycle training<a class="anchor-link" href="#1-Cycle-training"> </a>
 </h2>
 </div>
 </div>
