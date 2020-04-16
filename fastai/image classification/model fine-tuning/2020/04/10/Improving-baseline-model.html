@@ -3,36 +3,36 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Improving upon flowers-102 baseline model | Through Tinted Lenses</title>
+<title>Improving baseline model | Through Tinted Lenses</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Improving upon flowers-102 baseline model" />
+<meta property="og:title" content="Improving baseline model" />
 <meta name="author" content="Harish Vadlamani" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="With an aim to build a SOTA model by employing Fastai techniques." />
-<meta property="og:description" content="With an aim to build a SOTA model by employing Fastai techniques." />
+<meta name="description" content="With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques." />
+<meta property="og:description" content="With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques." />
 <link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html" />
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"With an aim to build a SOTA model by employing Fastai techniques.","headline":"Improving upon flowers-102 baseline model","dateModified":"2020-04-10T00:00:00-05:00","datePublished":"2020-04-10T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques.","headline":"Improving baseline model","dateModified":"2020-04-10T00:00:00-05:00","datePublished":"2020-04-10T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Improving upon flowers-102 baseline model | Through Tinted Lenses</title>
+<title>Improving baseline model | Through Tinted Lenses</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Improving upon flowers-102 baseline model" />
+<meta property="og:title" content="Improving baseline model" />
 <meta name="author" content="Harish Vadlamani" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="With an aim to build a SOTA model by employing Fastai techniques." />
-<meta property="og:description" content="With an aim to build a SOTA model by employing Fastai techniques." />
+<meta name="description" content="With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques." />
+<meta property="og:description" content="With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques." />
 <link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html" />
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"With an aim to build a SOTA model by employing Fastai techniques.","headline":"Improving upon flowers-102 baseline model","dateModified":"2020-04-10T00:00:00-05:00","datePublished":"2020-04-10T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques.","headline":"Improving baseline model","dateModified":"2020-04-10T00:00:00-05:00","datePublished":"2020-04-10T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html"},"url":"https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -87,7 +87,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Improving upon flowers-102 baseline model</h1><p class="page-description">With an aim to build a SOTA model by employing Fastai techniques.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-10T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Improving baseline model</h1><p class="page-description">With an aim to build a SOTA model on flowers-102 dataset by employing Fastai techniques.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-10T00:00:00-05:00" itemprop="datePublished">
         Apr 10, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -147,7 +147,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Model-prediction">Model prediction </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Presizing-and-fine_tune">Presizing and fine_tune </a></li>
+<li class="toc-entry toc-h2"><a href="#Presizing">Presizing </a></li>
 <li class="toc-entry toc-h2"><a href="#Learning-rate-finder">Learning rate finder </a></li>
 <li class="toc-entry toc-h2"><a href="#1-Cycle-training">1 Cycle training </a></li>
 <li class="toc-entry toc-h2"><a href="#Discriminative-learning-rates">Discriminative learning rates </a></li>
@@ -728,8 +728,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Presizing-and-fine_tune">
-<a class="anchor" href="#Presizing-and-fine_tune" aria-hidden="true"><span class="octicon octicon-link"></span></a>Presizing and fine_tune<a class="anchor-link" href="#Presizing-and-fine_tune"> </a>
+<h2 id="Presizing">
+<a class="anchor" href="#Presizing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Presizing<a class="anchor-link" href="#Presizing"> </a>
 </h2>
 </div>
 </div>
