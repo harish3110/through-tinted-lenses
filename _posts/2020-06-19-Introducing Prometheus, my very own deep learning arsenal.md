@@ -9,6 +9,7 @@ title: Introducing Prometheus, my very own deep learning arsenal.
 ## Introducing Prometheus
 
 ![prometheus](https://drive.google.com/file/d/1d_x8ZjbLCPMiIDDLgiYgQ3ocgGY5LQY9/view?usp=sharing)
+![](images/prometheus.JPG)
 
 > "In Greek mythology, Prometheus, meaning "forethought") is a Titan, culture hero, and trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire and giving it to humanity as civilization. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally."
 
