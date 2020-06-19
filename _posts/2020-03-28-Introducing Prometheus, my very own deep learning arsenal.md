@@ -8,6 +8,8 @@ title: Introducing Prometheus, my very own deep learning arsenal.
 ---
 ## Introducing Prometheus
 
+![prometheus](/images/prometheus.JPG "Prometheus")
+
 > "In Greek mythology, Prometheus, meaning "forethought") is a Titan, culture hero, and trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire and giving it to humanity as civilization. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally."
 
 
@@ -47,7 +49,7 @@ This being said, If you're the type of person who doesn't envy this process and 
 ---
 ## Components
 
-
+![components](/images/components.JPG "Components")
 
 ---
 ### GPU
