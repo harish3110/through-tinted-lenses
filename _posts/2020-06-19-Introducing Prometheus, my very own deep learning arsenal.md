@@ -8,7 +8,7 @@ title: Introducing Prometheus, my very own deep learning arsenal.
 ---
 ## Introducing Prometheus
 
-![prometheus](/images/prometheus.JPG "Prometheus")
+![prometheus](./images/prometheus.JPG "Prometheus")
 
 > "In Greek mythology, Prometheus, meaning "forethought") is a Titan, culture hero, and trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire and giving it to humanity as civilization. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally."
 
@@ -40,7 +40,8 @@ Starting out, I was certain that this was the right choice considering that the 
 
 This was followed by endless hours of watching various PC builds on YouTube and learning more and more about the fascinating hobby of PC building. These hours spent watching people such jaw-dropping builds motiavted be so much in wanting to build my own PC and the more I saw, the less daunting the whole task seemed. I highly recommend watching builds based on the components you decide specifically by [Linus Tech Tips](https://www.youtube.com/user/LinusTechTips), [Jays Two Cents](https://www.youtube.com/user/Jayztwocents) and [BitWit](https://www.youtube.com/user/AwesomeSauceNews). 
 
-If you would like an all-in-one resource to build a PC based on the components needed to build a DL worksation like mine, this is the only one you'll probably need:[How to Build a PC! Step-by-step](https://www.youtube.com/watch?v=IhX0fOUYd8Q) by [BitWit](https://www.youtube.com/user/AwesomeSauceNews). 
+If you would like an all-in-one resource to build a PC based on the components needed to build a DL worksation like mine, this is the only one you'll probably need:
+[How to Build a PC! Step-by-step](https://www.youtube.com/watch?v=IhX0fOUYd8Q) by [BitWit](https://www.youtube.com/user/AwesomeSauceNews). 
 
 In hindsight, I can confidently say that building my own rig has been a wonderful learning experience that I am glad I did. Despite ones fears, it is worth pointing out that the process despite seeming pretty intimidating is quite easy if one follows the right guides. The components involved in building the PC are deinitely expensive and touted as quite delicate but in all fairness all the parts available today are quite rugged and one can dispel unnecessary fears of damaging them. Having built the entire system on my own, I have full control on any future expansion plans I have on this build and know exactly what the process is. I'm definitely another in the long line of individuals who would like to take PC building as a valuable hobby. 
 
@@ -49,7 +50,7 @@ This being said, If you're the type of person who doesn't envy this process and 
 ---
 ## Components
 
-![components](/images/components.JPG "Components")
+![components](./images/components.JPG "Components")
 
 ---
 ### GPU
