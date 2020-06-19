@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 layout: post
 description: 
 categories: [hardware, setup]
