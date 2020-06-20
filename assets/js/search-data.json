@@ -62,7 +62,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": ". Hi there, Harish here! . I am a data science and ML enthusiast trying to do my bit in the field. Apart from this I am a technology evangelist, a bibliophile, and a deranged Liverpool fan! :) . If you would like to provide some feedbac/suggestions on the content I post you can reach me out on my twitter handle. .",
+          "content": "This is where you put the contents of your About page. Like all your pages, it’s in Markdown format. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://harish3110.github.io/through-tinted-lenses/about/",
           "relUrl": "/about/",
           "date": ""
@@ -86,6 +86,20 @@
   
 
   
+  
+
+  
+  
+
+  
+      ,"page10": {
+          "title": "",
+          "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
+          "url": "https://harish3110.github.io/through-tinted-lenses/robots.txt",
+          "relUrl": "/robots.txt",
+          "date": ""
+      }
+      
   
 
 }

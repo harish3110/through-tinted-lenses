@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/about/" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <script type="application/ld+json">
-{"description":"Immerse into the lesser known.","headline":"About Me","@type":"WebSite","url":"https://harish3110.github.io/through-tinted-lenses/about/","name":"Through Tinted Lenses","@context":"https://schema.org"}</script>
+{"description":"Immerse into the lesser known.","@type":"WebSite","headline":"About Me","url":"https://harish3110.github.io/through-tinted-lenses/about/","name":"Through Tinted Lenses","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>About Me | Through Tinted Lenses</title>
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/about/" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <script type="application/ld+json">
-{"description":"Immerse into the lesser known.","headline":"About Me","@type":"WebSite","url":"https://harish3110.github.io/through-tinted-lenses/about/","name":"Through Tinted Lenses","@context":"https://schema.org"}</script>
+{"description":"Immerse into the lesser known.","@type":"WebSite","headline":"About Me","url":"https://harish3110.github.io/through-tinted-lenses/about/","name":"Through Tinted Lenses","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -37,7 +37,7 @@ function wrap_img(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
         var elements = document.querySelectorAll(".post img");
         Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title")) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
                 const caption = document.createElement('figcaption');
                 var node = document.createTextNode(el.getAttribute("title"));
                 caption.appendChild(node);
@@ -85,14 +85,17 @@ window.onload = wrap_img;
   </header>
 
   <div class="post-content">
-    <p><img src="/through-tinted-lenses/images/profile_pic.jpg" alt="" /></p>
+    <p>This is where you put the contents of your <em>About</em> page. Like all your pages, it’s in <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> format.</p>
 
-<p>Hi there, Harish here!</p>
+<p>This website is powered by <strong><a href="https://github.com/fastai/fastpages">fastpages</a></strong> <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
 
-<p>I am a data science and ML enthusiast trying to do my bit in the field. Apart from this I am a technology evangelist, a bibliophile, and a deranged Liverpool fan! :)</p>
-
-<p>If you would like to provide some feedbac/suggestions on the content I post you can reach me out on my <a href="https://twitter.com/harish3110">twitter</a> handle.</p>
-
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>a blogging platform that natively supports Jupyter notebooks in addition to other formats. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
   </div>
 

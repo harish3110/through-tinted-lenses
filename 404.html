@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/404.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <script type="application/ld+json">
-{"description":"Immerse into the lesser known.","headline":"Through Tinted Lenses","@type":"WebPage","url":"https://harish3110.github.io/through-tinted-lenses/404.html","@context":"https://schema.org"}</script>
+{"description":"Immerse into the lesser known.","@type":"WebPage","headline":"Through Tinted Lenses","url":"https://harish3110.github.io/through-tinted-lenses/404.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Through Tinted Lenses | Immerse into the lesser known.</title>
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/404.html" />
 <meta property="og:site_name" content="Through Tinted Lenses" />
 <script type="application/ld+json">
-{"description":"Immerse into the lesser known.","headline":"Through Tinted Lenses","@type":"WebPage","url":"https://harish3110.github.io/through-tinted-lenses/404.html","@context":"https://schema.org"}</script>
+{"description":"Immerse into the lesser known.","@type":"WebPage","headline":"Through Tinted Lenses","url":"https://harish3110.github.io/through-tinted-lenses/404.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -37,7 +37,7 @@ function wrap_img(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
         var elements = document.querySelectorAll(".post img");
         Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title")) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
                 const caption = document.createElement('figcaption');
                 var node = document.createTextNode(el.getAttribute("title"));
                 caption.appendChild(node);
