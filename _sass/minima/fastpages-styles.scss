@@ -9,6 +9,11 @@
         margin-right: auto;
 }
 
+img.emoji{
+      display: inline !important;
+      vertical-align: baseline !important;
+}
+
 .post figcaption {
   text-align: center;
   font-size: .8rem;
@@ -235,5 +240,14 @@ table {
 .output_text.output_execute_result {
   pre{
     white-space: pre-wrap;
+  }
+}
+
+
+// Handling large charts on mobile devices
+@media only screen and (max-width: 900px) {
+  /* for mobile phone and tablet devices */
+  .output_wrapper{
+    overflow: scroll;
   }
 }
