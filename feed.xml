@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://harish3110.github.io/through-tinted-lenses/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harish3110.github.io/through-tinted-lenses/" rel="alternate" type="text/html" /><updated>2020-06-21T02:23:14-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/feed.xml</id><title type="html">Through Tinted Lenses</title><subtitle>Immerse into the lesser known.</subtitle><entry><title type="html">Introducing Prometheus</title><link href="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus.html" rel="alternate" type="text/html" title="Introducing Prometheus" /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus</id><content type="html" xml:base="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus.html">&lt;p&gt;“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://harish3110.github.io/through-tinted-lenses/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harish3110.github.io/through-tinted-lenses/" rel="alternate" type="text/html" /><updated>2020-06-21T02:44:27-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/feed.xml</id><title type="html">Through Tinted Lenses</title><subtitle>Immerse into the lesser known.</subtitle><entry><title type="html">Introducing Prometheus</title><link href="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus.html" rel="alternate" type="text/html" title="Introducing Prometheus" /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus</id><content type="html" xml:base="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus.html">&lt;p&gt;“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Prometheus&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Workstation Setup&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Why own a Deep Learning workstation?&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;why-own-a-deep-learning-workstation&quot;&gt;Why own a Deep Learning workstation?&lt;/h1&gt;
 
 &lt;p&gt;Today, there are a myriad of cloud GPU instances one can use to dabble in the field of deep learning. Over the past year or so, I have used almost all the possible options available which has helped me grasp the concepts of the field as it has made it easy for anyone to prototype the knowledge acquired in the field at an affordable cost. Most of these services also offer free tier options and provide &lt;strong&gt;almost&lt;/strong&gt; immediate access to a GPU instance.&lt;/p&gt;
 
@@ -31,7 +33,9 @@
 &lt;p&gt;“Human behavior follows the Law of Least Effort. Reduce the friction associated with good habits. When friction is low, habits are easy.”&lt;br /&gt;
 ― James Clear&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Should you build your own workstation?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h1 id=&quot;should-you-build-your-own-workstation&quot;&gt;Should you build your own workstation?&lt;/h1&gt;
 
 &lt;p&gt;Due to my lack of experience with hardware components and having not built a PC till now, I was definitely nervous to build my own rig without the help of people with experience. There are many dealers and companies that provide services of building DL workstation either as a fixed option or also provide customizing your options.&lt;/p&gt;
 
@@ -47,12 +51,14 @@
 
 &lt;p&gt;This being said, If you’re the type of person who doesn’t envy this process and don’t want to deal with the hassle of building your machine, I would suggest checking out &lt;a href=&quot;https://www.ant-pc.com/ai-and-deep-learning&quot;&gt;Ant-PC&lt;/a&gt; who provide customizable builds specific to deep learning and also provide on-site warranty and they thoroughly stress test their parts before shipping for an affordable premium cost in comparison.&lt;/p&gt;
 
-&lt;h3 id=&quot;components&quot;&gt;Components&lt;/h3&gt;
+&lt;h1 id=&quot;components&quot;&gt;Components&lt;/h1&gt;
 
-&lt;h3&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/h3&gt;
 
-&lt;p&gt;#### &lt;br /&gt;
-&lt;strong&gt;CPU and Motherboard:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Components Used&lt;/p&gt;
+
+&lt;p&gt;## &lt;br /&gt;
+CPU and Motherboard:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -80,7 +86,7 @@
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Despite the notion among many, an AMD setup supports all the popular deep learning libraries as efficiently as Intel boards.&lt;/p&gt;
 
-&lt;h4 id=&quot;storage&quot;&gt;&lt;strong&gt;Storage:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;storage&quot;&gt;Storage:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -97,7 +103,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;gpu&quot;&gt;&lt;strong&gt;GPU:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;gpu&quot;&gt;GPU:&lt;/h2&gt;
 
 &lt;p&gt;Arguably the most important component nowadays in a PC build, it is especially important for my use case since almost all the heavy lifting of training an ML model nowadays is done by it. It comprises of almost 50% of the overall cost of the build and thus deciding this component is definitely one of the most important aspect to building any deep learning rig.&lt;/p&gt;
 
@@ -109,7 +115,7 @@
 
 &lt;p&gt;I would have loved to opt for the RTX 2080Ti but in all honesty couldn’t fathom and justify the price difference between the two. I have developed my build in such a way that it can support a multiple GPU system, so maybe down the road ;).&lt;/p&gt;
 
-&lt;h4 id=&quot;power-supply&quot;&gt;&lt;strong&gt;Power Supply:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;power-supply&quot;&gt;Power Supply:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -123,7 +129,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;ram&quot;&gt;&lt;strong&gt;RAM&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;ram&quot;&gt;RAM:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -142,7 +148,7 @@
   &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Manufacturers make RAM sticks optimized specifically for either an Intel or AMD or both and it’s worth checking it out but as far as I know they don’t make as much difference in performance.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;cpu-cooler&quot;&gt;&lt;strong&gt;CPU Cooler&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;cpu-cooler&quot;&gt;CPU Cooler:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -160,7 +166,7 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;AMD Prism Cooler&lt;/p&gt;
@@ -174,7 +180,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;cabinet&quot;&gt;&lt;strong&gt; Cabinet&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&quot;cabinet&quot;&gt; Cabinet:&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -191,9 +197,15 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;cable-management&quot;&gt;&lt;strong&gt;Cable Management&lt;/strong&gt;&lt;/h4&gt;
+&lt;h1 id=&quot;cable-management&quot;&gt;Cable Management&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before cable management&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bad cable management&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -204,7 +216,13 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After cable management&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus/media/image8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After cable management&lt;/p&gt;
 
 &lt;p&gt;###&lt;/p&gt;</content><author><name></name></author><summary type="html">“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”</summary></entry><entry><title type="html">Improving baseline model</title><link href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html" rel="alternate" type="text/html" title="Improving baseline model" /><published>2020-04-10T00:00:00-05:00</published><updated>2020-04-10T00:00:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model</id><content type="html" xml:base="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html">&lt;!--
 #################################################
