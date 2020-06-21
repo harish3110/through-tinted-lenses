@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Introducing Prometheus; My Very Own Deep Learning Arsenal | Through Tinted Lenses</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Introducing Prometheus; My Very Own Deep Learning Arsenal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”" />
+<meta property="og:description" content="“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”" />
+<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html" />
+<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html" />
+<meta property="og:site_name" content="Through Tinted Lenses" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-21T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”","@type":"BlogPosting","headline":"Introducing Prometheus; My Very Own Deep Learning Arsenal","dateModified":"2020-06-21T00:00:00-05:00","datePublished":"2020-06-21T00:00:00-05:00","url":"https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Introducing Prometheus; My Very Own Deep Learning Arsenal | Through Tinted Lenses</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Introducing Prometheus; My Very Own Deep Learning Arsenal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”" />
+<meta property="og:description" content="“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”" />
+<link rel="canonical" href="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html" />
+<meta property="og:url" content="https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html" />
+<meta property="og:site_name" content="Through Tinted Lenses" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-21T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”","@type":"BlogPosting","headline":"Introducing Prometheus; My Very Own Deep Learning Arsenal","dateModified":"2020-06-21T00:00:00-05:00","datePublished":"2020-06-21T00:00:00-05:00","url":"https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/through-tinted-lenses/">Through Tinted Lenses</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/through-tinted-lenses/about/">About Me</a><a class="page-link" href="/through-tinted-lenses/search/">Search</a><a class="page-link" href="/through-tinted-lenses/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Introducing Prometheus; My Very Own Deep Learning Arsenal</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-21T00:00:00-05:00" itemprop="datePublished">
+        Jun 21, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <blockquote>
+  <p>“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”</p>
+</blockquote>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image1.jpeg" alt="" /></p>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image2.jpeg" alt="" /></p>
+
+<h1 id="why-own-a-deep-learning-workstation">Why own a Deep Learning workstation?</h1>
+
+<p>Today, there are a myriad of cloud GPU instances one can use to dabble in the field of deep learning. Over the past year or so, I have used almost all the possible options available which has helped me grasp the concepts of the field as it has made it easy for anyone to prototype the knowledge acquired in the field at an affordable cost. Most of these services also offer free tier options and provide <strong>almost</strong> immediate access to a GPU instance.</p>
+
+<p>My overall favorite has been Google’s GCP which also provides a 300$ credit to all their users as well as the newly launched Colab Pro which in my opinion is the best value for money option for most DL enthusiasts as it gives you access to multiple GPU instances for a nominal monthly fee. GCP’s main advantage is full command line access to your Linux based server whereas Colab’s interface is quite intuitive as well. Until recently, I had opted for the Colab Pro for most of my prototyping and finally renting a GCP instance to train large models on an hourly basis.</p>
+
+<p>This being said, there are still downsides to this setup which becomes way too evident as you start spending longer time using a setup mentioned above which I’m sure anyone in the field long enough can easily vouch for. Despite the fact that gaining access to a GPU instance has become way too easy, here the major downsides which has bugged me long enough in order to shell out and invest in building my own DL rig:</p>
+
+<ul>
+  <li>
+    <p>The setup process of getting your instance started with the correct requirements can be quite tedious and takes some time to get a hang of things in each cloud platform available. </p>
+  </li>
+  <li>
+    <p>Pre-emptible instances, which are the free-tier option provided by cloud services can get really annoying as you can be kicked off the instance abruptly in the middle of your training process.</p>
+  </li>
+  <li>
+    <p>On the other hand, the constant worry to ensure shutting down your device to avoid racking up the bill is definitely real.</p>
+  </li>
+</ul>
+
+<p>In short, having your workstation at hand gives you the much-needed freedom to prototype models at the flick of your fingers and gets rid of all the friction involved in using the cloud options available. This is an extension to James Clear’s advice ‘make it easy’ which is basically to eliminate the friction involved in performing long-term rewarding habits.</p>
+
+<blockquote>
+  <p>“Human behavior follows the Law of Least Effort. Reduce the friction associated with good habits. When friction is low, habits are easy.”<br />
+― James Clear</p>
+</blockquote>
+
+<h1 id="should-you-build-your-own-workstation">Should you build your own workstation?</h1>
+
+<p>Due to my lack of experience with hardware components and having not built a PC till now, I was definitely nervous to build my own rig without the help of people with experience. There are many dealers and companies that provide services of building DL workstation either as a fixed option or also provide customizing your options.</p>
+
+<p>Starting out, I was certain that this was the right choice considering that the parts are quite expensive and its natural to feel nervous that you might fry a component and thus waste loads of money. So, I started out researching all the components needed to build a decent DL workstation. Here again, I would like to point back to another Tim Dettmers blog, <a href="https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/">A Full Hardware Guide to Deep Learning</a>, which shaped my though process in building Prometheus.</p>
+
+<p>This was followed by endless hours of watching various PC builds on YouTube and learning more and more about the fascinating hobby of PC building. These hours spent watching people such jaw-dropping builds motivated be so much in wanting to build my own PC and the more I saw, the less daunting the whole task seemed. I highly recommend watching builds based on the components you decide specifically by <a href="https://www.youtube.com/user/LinusTechTips">Linus Tech Tips</a>, <a href="https://www.youtube.com/user/Jayztwocents">Jays Two Cents</a> and <a href="https://www.youtube.com/user/AwesomeSauceNews">BitWit</a>.</p>
+
+<p>If you would like an all-in-one resource to build a PC based on the components needed to build a DL workstation like mine, this is the only one you’ll probably need:</p>
+
+<p><a href="https://www.youtube.com/watch?v=IhX0fOUYd8Q">How to Build a PC! Step-by-step</a> by <a href="https://www.youtube.com/user/AwesomeSauceNews">BitWit</a></p>
+
+<p>In hindsight, I can confidently say that building my own PC has been a wonderful learning experience that I am glad I partook in. Despite ones fears, it is worth pointing out that the process despite seeming pretty intimidating is quite easy if one follows the right guides. The components involved in building the PC are definitely expensive and touted as quite delicate but in all fairness all the parts available today are quite rugged and one can dispel unnecessary fears of damaging them. Having built the entire system on my own, I have full control on any future expansion plans I have on this build and know exactly what the process is. I’m definitely another in the long line of individuals who would like to take PC building as a valuable hobby.</p>
+
+<p>This being said, If you’re the type of person who doesn’t envy this process and don’t want to deal with the hassle of building your machine, I would suggest checking out <a href="https://www.ant-pc.com/ai-and-deep-learning">Ant-PC</a> who provide customizable builds specific to deep learning and also provide on-site warranty and they thoroughly stress test their parts before shipping for an affordable premium cost in comparison.</p>
+
+<h1 id="components">Components</h1>
+
+<h3><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image3.jpeg" alt="" /></h3>
+
+<h2 id="cpu-and-motherboard">CPU and Motherboard:</h2>
+
+<ul>
+  <li>
+    <p>The heart of every workstation depends on these two components and the decision between choosing AMD or Intel would be the main decision that would pave the way for the rest of components you choose.</p>
+  </li>
+  <li>
+    <p>In the last couple of years, AMD has made great strides in overthrowing up Intel off its perch by providing high performance chips at competitive prices.</p>
+  </li>
+  <li>
+    <p>I went with the AMD route and chose the Ryzen 7 3700x card which is probably the best option in terms of performance and cost. It’s an 8 core processor with 12 threads with a support for up to 128Gb in memory.</p>
+  </li>
+  <li>
+    <p>In terms of motherboard there are way too many options available in all budget ranges but if you’re going for a premium build then going for an X570 board ensures future proofing as they support PCIE Gen 4 and come with multiple M.2 slots for super-fast SSD storage options.</p>
+  </li>
+  <li>
+    <p>Look for an X570 boards that have decent VRM(Voltage Regulated Modules) which is solely responsible for supplying stable voltage to your motherboard.</p>
+  </li>
+  <li>
+    <p>The best value proposition X570 board with great VRM’s is the ASUS TUF Gaming X570 option, which was my first choice for my build, but due to the lack of parts available owing to the current global pandemic, I had to increase my budget and go for a higher end, Aorus X570 Ultra motherboard.</p>
+  </li>
+  <li>
+    <p>The Aorus Ultra board has pretty amazing VRM’s, 3 full-capacity PCIE 4 M.2 slots, supports NVIDIA 2 way SLI, Wi-Fi 6, Bluetooth 5.0 and premium Realtek audio. It’s definitely one of the best mid-range X570 board in the market today and despite the added cost over an ASUS TUF Gaming board, it provides enough expansion and future proofing for years to come.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Note:</strong> Despite the notion among many, an AMD setup supports all the popular deep learning libraries as efficiently as Intel boards.</p>
+</blockquote>
+
+<h2 id="storage">Storage:</h2>
+
+<ul>
+  <li>
+    <p>It’s vital to go for an SSD to put your OS on, and ponying up for a good quality M.2 NVME SSD over the older 2.5’ SATA SSD makes a big difference in transfer speed.</p>
+  </li>
+  <li>
+    <p>For storage purposed going for a HDD would make sense</p>
+  </li>
+  <li>
+    <p>I got a 500GB Samsung 970 Evo Plus M.2 NVMe SSD to put Linux on for my main use and a 1 TB 7200 RPM WD Blue HDD for storage and putting on Windows.</p>
+  </li>
+  <li>
+    <p>Will look out for deals to add another SSD down the lane for loading Windows on for a faster and smoother experience.</p>
+  </li>
+</ul>
+
+<h2 id="gpu">GPU:</h2>
+
+<ul>
+  <li>
+    <p>Arguably the most important component nowadays in a PC build, it is especially important for my use case since almost all the heavy lifting of training an ML model nowadays is done by it.</p>
+  </li>
+  <li>
+    <p>It comprises of almost 50% of the overall cost of the build and thus deciding this component is definitely one of the most important aspect to building any deep learning rig.</p>
+  </li>
+  <li>
+    <p>My insight into choosing the GPU is heavily shaped by Tim Dettmer’s blog <a href="https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/">post</a> where he compares the price to performance of the latest NVIDIA cards.</p>
+  </li>
+  <li>
+    <p>In the blog post which is a little dated today, he recommends the RTX 2070 as the sweet spot in terms of cost-efficiency and performance. But since the release of the 20 series RTX Super cards which provide much better performance for mot much a difference.</p>
+  </li>
+  <li>
+    <p>I opted for the RTX 2070 Super and specifically chose Gigabyte’s RTX 2070 Super Windforce OC, which is highly regarded as one of the best cost efficient GPU in the market today.</p>
+  </li>
+  <li>
+    <p>The recent NVIDIA cards since the 1080Ti offer the possibility of training DL models at half-precision points i.e. allow the possibility of training in FP16 over full precision training at FP32 which has been vital for training large models much quicker and lowering the GPU RAM usage since in theory this type of training doubles the GPU RAM at your disposal.</p>
+  </li>
+  <li>
+    <p>I would have loved to opt for the RTX 2080Ti but in all honesty couldn’t fathom and justify the price difference between the two. I have developed my build in such a way that it can support a multiple GPU system, so maybe down the road ;).</p>
+  </li>
+</ul>
+
+<h2 id="power-supply">Power Supply:</h2>
+
+<ul>
+  <li>
+    <p>Choosing a PSU is pretty straightforward, just look out for a decent brand and ensure that you have bought a PSU that manages to adequately supply all the components you have and would like to have in the future.</p>
+  </li>
+  <li>
+    <p>In order to keep an expansion possibility of adding another GPU, I went for a Antec HCP 1000W PSU, which is a fully modular power supply with an 80+ platinum rating with decently premium black sleeved cables.</p>
+  </li>
+  <li>
+    <p>For setups with a single GPU, a 750W PSU is more than sufficient but it’s worth ensuring that the PSU is either 80+ gold rated for reliable power supply to your PC.</p>
+  </li>
+</ul>
+
+<h2 id="ram">RAM:</h2>
+
+<ul>
+  <li>
+    <h4 id="when-choosing-a-ram-the-main-criteria-to-ensure-is-to-have-enough-ram-to-perform-your-prototyping-smoothly-the-clock-speeds-and-latency-arent-as-important">When choosing a RAM, the main criteria to ensure is to have enough RAM to perform your prototyping smoothly. The clock speeds and latency aren’t as important</h4>
+  </li>
+  <li>
+    <p>For Intel processors, one could easily go for lower RAM speeds but AMD suggests users to go for higher clock rates, ideally above 3200Mhz.</p>
+  </li>
+  <li>
+    <h4 id="one-should-also-go-for-a-dual-channel-or-quad-channel-setup-to-achieve-ideal-performance">One should also go for a dual channel or quad channel setup to achieve ideal performance. </h4>
+  </li>
+  <li>So I decided to go for a dual channel, G.Skill Trident RGB 16*2 3200Mhz RAM bundle. </li>
+</ul>
+
+<blockquote>
+  <p><strong>Note:</strong> Manufacturers make RAM sticks optimized specifically for either an Intel or AMD or both and it’s worth checking it out but as far as I know they don’t make as much difference in performance.</p>
+</blockquote>
+
+<h2 id="cpu-cooler">CPU Cooler:</h2>
+
+<ul>
+  <li>
+    <p>The age old question that exists for CPU cooling is that between air cooling and water cooling.</p>
+  </li>
+  <li>
+    <p>It’s well-founded that a good beefy Air Cooler can provide as good or even better cooling performance for a much cheaper cost at the expense of fan noise.</p>
+  </li>
+  <li>
+    <p>An AIO(All-in-one) cooler does provide the advantage of being much quieter as well adds the aesthetics factor.</p>
+  </li>
+  <li>
+    <p>In my initial build, I used the stock cooler AMD Prism cooler but then succumbed to the urge of adding more RGB and aesthetics to my build and opted to buy the NZXT Kraken X63 cooler.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image4.jpeg" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>It’s worth noting that an AIO is definitely the hardest component to fix due to the work needed in orienting it and getting the bracket right.</p>
+  </li>
+  <li>
+    <p>Do ensure to get the latest AM4 bracket if going for an AMD build as they are more secure, this was what was missing in the initial X62 AIO I ordered at first but later exchanged it for the later X63 model which was basically the same cost as the predecessor.</p>
+  </li>
+</ul>
+
+<h2 id="cabinet"> Cabinet:</h2>
+
+<ul>
+  <li>
+    <p>Choosing a case/cabinet is a matter of preference at the end of the day.</p>
+  </li>
+  <li>
+    <p>Ensure that your case has decent airflow reviews which would be needed to keep your components at an ideal temperature and supports your expansion needs.</p>
+  </li>
+  <li>
+    <p>I wanted to get the Phanteks P400 Digital or Fractal Meshify C which has one of the best airflows for a nominal cost but due to lack of availability with the NZXT 510i which is great minimal looking case and provides a superb building experience.</p>
+  </li>
+  <li>
+    <p>The NZXT 510i lacks a front mesh and thus is less optimal in maintaining temperatures when compared two my initial picks but is definitely an eye-catching minimal case with great cable management, RGB capabilities and newer-IO ports to make up for.</p>
+  </li>
+</ul>
+
+<h1 id="cable-management">Cable Management</h1>
+
+<ul>
+  <li>
+    <p>Cable management is hands down the most time-consuming and frustrating task in a build especially if you’re obsessed like me in getting things look right.</p>
+  </li>
+  <li>
+    <p>Taking a piece of paper and plotting the wire path helps greatly in the process along with cable ties, velcro wraps and tape.</p>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <h4 id="before">Before:</h4>
+  </li>
+</ul>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image5.jpeg" alt="" /></p>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image6.jpeg" alt="" /></p>
+
+<ul>
+  <li>
+    <h4 id="after">After:</h4>
+  </li>
+</ul>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image7.jpeg" alt="" /></p>
+
+<p><img src="https://harish3110.github.io/through-tinted-lenses/assets/img/2020-06-21-Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal./media/image8.jpeg" alt="" /></p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>All in all, building my own workstation from the ground up has been an amazing learning experience and is definitely something I would wholesomely suggest it to anyone interested in pursuing a career in data science. There’s definitely a learning curve to get a grip of things but once you get past that it becomes very clear as to why PC building is such a popular hobby for people all over the world. The path of curiosity and desire to learn all there is to learn about PC building to getting the parts and building your own system and seeing a successful post screen is definitely an invaluable experience to cherish!</p>
+
+<p>By having a powerful workstation on hand has definitely made it very easy to protype quickly without having to run through the hoops of setting the necessary requirements for your work, since that’s just a one-time process.</p>
+
+<p>I’ll be following up this blog with another blog post detailing my setup process of getting all the necessary ML libraries installed, stress testing/ benchmarking my setup and setting up a remote server workstation.</p>
+
+  </div><a class="u-url" href="/through-tinted-lenses/2020/06/21/Introducing-Prometheus;-my-very-own-Deep-Learning-arsenal.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/through-tinted-lenses/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/through-tinted-lenses/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/through-tinted-lenses/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Immerse into the lesser known.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/harish3110" title="harish3110"><svg class="svg-icon grey"><use xlink:href="/through-tinted-lenses/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/harish3110" title="harish3110"><svg class="svg-icon grey"><use xlink:href="/through-tinted-lenses/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
