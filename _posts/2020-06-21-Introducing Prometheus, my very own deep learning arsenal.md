@@ -156,7 +156,7 @@ By having a powerful workstation on hand has definitely made it very easy to pro
 I'll be following up this blog with another blog post detailing my setup process of getting all the necessary ML libraries installed, stress testing/ bench-marking my setup and setting up a remote server workstation.
 
 
-![](https://cdn-images-1.medium.com/max/600/1*SfOPXj5uQp0mRh7RR65R-g.jpeg 'Prometheus Setup')
+![](https://cdn-images-1.medium.com/max/600/1*SfOPXj5uQp0mRh7RR65R-g.jpeg)
 ![](https://cdn-images-1.medium.com/max/600/1*1GjAMdcrdK-j-oFCG-AgbQ.jpeg 'Prometheus Setup')
 ![](https://cdn-images-1.medium.com/max/800/1*sQPHTs7KKQj7lCKfrJVvRQ.gif)
 
