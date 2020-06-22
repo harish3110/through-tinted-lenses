@@ -42,7 +42,7 @@ This was followed by endless hours of watching various PC builds on YouTube and 
 
 If you would like an all-in-one resource to build a PC based on the components needed to build a DL workstation like mine, this is the only one you’ll probably need:
 
-[How to Build a PC! Step-by-step](https://www.youtube.com/watch?v=IhX0fOUYd8Q) by BitWit(https://www.youtube.com/user/AwesomeSauceNews)
+[How to Build a PC! Step-by-step](https://www.youtube.com/watch?v=IhX0fOUYd8Q) by [BitWit](https://www.youtube.com/user/AwesomeSauceNews)
 
 In hindsight, I can confidently say that building my PC has been a wonderful learning experience that I am glad I partook in. Despite one’s fears, it is worth pointing out that the process despite seeming pretty intimidating is quite easy if one follows the right guides. The components involved in building the PC are expensive and touted as quite delicate but in all fairness, all the parts available today are quite rugged and one can dispel unnecessary fears of damaging them. Having built the entire system on my own, I have full control over any future expansion plans I have on this build and know exactly what the process is. I’m another in the long line of individuals who would like to take PC building as a valuable hobby.
 
