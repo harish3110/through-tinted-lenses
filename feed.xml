@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://harish3110.github.io/through-tinted-lenses/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harish3110.github.io/through-tinted-lenses/" rel="alternate" type="text/html" /><updated>2020-06-22T03:17:19-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/feed.xml</id><title type="html">Through Tinted Lenses</title><subtitle>Immerse into the lesser known.</subtitle><entry><title type="html">Introducing Prometheus, my very own deep learning arsenal.</title><link href="https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html" rel="alternate" type="text/html" title="Introducing Prometheus, my very own deep learning arsenal." /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing%20Prometheus,%20my%20very%20own%20deep%20learning%20arsenal</id><content type="html" xml:base="https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://harish3110.github.io/through-tinted-lenses/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harish3110.github.io/through-tinted-lenses/" rel="alternate" type="text/html" /><updated>2020-06-22T03:41:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/feed.xml</id><title type="html">Through Tinted Lenses</title><subtitle>Immerse into the lesser known.</subtitle><entry><title type="html">Introducing Prometheus, my very own deep learning arsenal.</title><link href="https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html" rel="alternate" type="text/html" title="Introducing Prometheus, my very own deep learning arsenal." /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing%20Prometheus,%20my%20very%20own%20deep%20learning%20arsenal</id><content type="html" xml:base="https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html">&lt;blockquote&gt;
   &lt;p&gt;“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -155,15 +155,17 @@
 &lt;hr /&gt;
 &lt;h2 id=&quot;complete-setup-parts-list&quot;&gt;Complete Setup Parts List&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;CPU:&lt;/strong&gt; AMD Ryzen 7 3700x
-&lt;strong&gt;Motherboard:&lt;/strong&gt; Gigabyte Aorus X570 Ultra
-&lt;strong&gt;GPU:&lt;/strong&gt; Gigabyte NVIDIA RTX 2070 Super Windforce OC
-&lt;strong&gt;RAM:&lt;/strong&gt; G.Skill Trident RGB 3200Mhz C16 * 2
-&lt;strong&gt;CPU Cooler:&lt;/strong&gt; NZXT Kraken X63
-&lt;strong&gt;Case:&lt;/strong&gt; NZXT 510i
-&lt;strong&gt;Monitor:&lt;/strong&gt; BenQ GW2480 1080p 60Hz Monitor * 2
-&lt;strong&gt;Mouse:&lt;/strong&gt; Logitech MX Master 2S
-&lt;strong&gt;Keyboard:&lt;/strong&gt; Ducky One 2 SF Mechanical Keyboard&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CPU:&lt;/strong&gt; AMD Ryzen 7 3700x&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Motherboard:&lt;/strong&gt; Gigabyte Aorus X570 Ultra&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GPU:&lt;/strong&gt; Gigabyte NVIDIA RTX 2070 Super Windforce OC&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; G.Skill Trident RGB 3200Mhz C16 * 2&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;CPU Cooler:&lt;/strong&gt; NZXT Kraken X63&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Case:&lt;/strong&gt; NZXT 510i&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Monitor:&lt;/strong&gt; BenQ GW2480 1080p 60Hz Monitor * 2&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mouse:&lt;/strong&gt; Logitech MX Master 2S&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Keyboard:&lt;/strong&gt; Ducky One 2 SF Mechanical Keyboard&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
