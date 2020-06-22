@@ -113,7 +113,7 @@ This being said, If you’re the type of person who doesn’t envy this process 
 
 ### Cabinet/ Case
 
--Choosing a case/cabinet is a matter of preference at the end of the day.
+- Choosing a case/cabinet is a matter of preference at the end of the day.
 - Ensure that your case has decent airflow reviews which would be needed to keep your components at an ideal temperature and supports your expansion needs.
 - I wanted to get the Phanteks P400 Digital or Fractal Meshify C which has one of the best airflow's at a decent cost but due to lack of availability with the NZXT 510i which is the great minimal looking case and provides a superb building experience.
 - The NZXT 510i lacks a front mesh and is thus less optimal in maintaining temperatures when compared to both my initial picks but is surely an eye-catching minimal case with great cable management, RGB capabilities, and newer-IO ports to make up for.
