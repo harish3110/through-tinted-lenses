@@ -134,6 +134,19 @@ This being said, If you’re the type of person who doesn’t envy this process 
 ![](https://cdn-images-1.medium.com/max/800/1*6uqMtcobkHgDCnzpixvaVg.png "Final Front View")
 
 ---
+## Complete Setup Parts List
+
+**CPU:** AMD Ryzen 7 3700x
+**Motherboard:** Gigabyte Aorus X570 Ultra
+**GPU:** Gigabyte NVIDIA RTX 2070 Super Windforce OC
+**RAM:** G.Skill Trident RGB 3200Mhz C16 * 2
+**CPU Cooler:** NZXT Kraken X63
+**Case:** NZXT 510i
+**Monitor:** BenQ GW2480 1080p 60Hz Monitor * 2
+**Mouse:** Logitech MX Master 2S
+**Keyboard:** Ducky One 2 SF Mechanical Keyboard
+
+---
 ## Conclusion
 
 All in all, building my own workstation from the ground up has been an amazing learning experience and is definitely something I would wholesomely suggest it to anyone interested in pursuing a career in data science. There's definitely a learning curve to get a grip of things but once you get past that it becomes very clear as to why PC building is such a popular hobby for people all over the world. The path of curiosity and desire to learn all there is to learn about PC building to getting the parts and building your own system and seeing a successful post screen is definitely an invaluable experience to cherish!
