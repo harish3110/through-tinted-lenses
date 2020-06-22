@@ -142,6 +142,7 @@ This being said, If you’re the type of person who doesn’t envy this process 
 - **RAM:** G.Skill Trident RGB 3200Mhz C16 * 2
 - **CPU Cooler:** NZXT Kraken X63
 - **Case:** NZXT 510i
+- **PSU:** Antec HCP 1000W
 - **Monitor:** BenQ GW2480 1080p 60Hz Monitor * 2
 - **Mouse:** Logitech MX Master 2S
 - **Keyboard:** Ducky One 2 SF Mechanical Keyboard
