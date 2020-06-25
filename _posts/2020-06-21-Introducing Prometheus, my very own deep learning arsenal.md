@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: 
-categories: [workstation, hardware, setup]
+categories: [Workstation Setup]
 title: Introducing Prometheus, my very own deep learning arsenal.
 > (RTX 2070 Super/ Ryzen 7 3700X/ 32 Gb)
 ---
