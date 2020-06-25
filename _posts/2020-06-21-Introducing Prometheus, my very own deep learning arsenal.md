@@ -4,7 +4,7 @@ layout: post
 description: 
 categories: [workstation, hardware, setup]
 title: Introducing Prometheus, my very own deep learning arsenal.
-
+> (RTX 2070 Super/ Ryzen 7 3700X/ 32 Gb)
 ---
 >“In Greek mythology, Prometheus, meaning “forethought” is a Titan, a culture hero, and a trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire from Zeus and giving it to humanity. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally.”
 
