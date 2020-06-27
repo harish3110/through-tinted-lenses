@@ -1524,22 +1524,17 @@ The test set has 3263 records.
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">model</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1594,9 +1589,10 @@ The test set has 3263 records.
 <h5 id="Embedding-Layer">
 <a class="anchor" href="#Embedding-Layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Embedding Layer<a class="anchor-link" href="#Embedding-Layer"> </a>
 </h5>
-<p>We can see that the above <code>AWD LSTM</code> architecture used in ULMFiT has a bunch of something called <strong>embedding</strong> layers as the input here.</p>
-<p>The pre-processed text and the batching of data using dataloaders is followed by by passing this data into an embedding layer which is small neural network by itself which is used to calculate token i.e. word dependencies in the dataset. These layers are trained along with the main neural network model and learns relationships between words in the dataset.</p>
+<p>We can see that the above <code>AWD LSTM</code> architecture used in ULMFiT has a bunch of layers called <strong>embedding</strong> layers as the input here.</p>
+<p>The pre-processed text and the batching of data using dataloaders is followed by passing this data into an embedding layer which can be considered as a small neural network by itself which is used to calculate token i.e. word dependencies in the dataset. These layers are trained along with the main neural network model and learns relationships between words in the dataset along the way.</p>
 <p>An embedding layer is a computationally efficient method to represent tokens in a lesser dimension space, being less sparse and as a look-up table for all tokens in our dataset which captures relationships between the tokens.</p>
+<p>It's a much more computationally efficient approach to the traditional <code>one-hot encoding</code> appraoch which can make these types of task really expensive and inefficient.</p>
 
 </div>
 </div>
