@@ -1792,8 +1792,8 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Once we have fine-tuned out LM to our downstream task, we save the encoder part of the model which portion of the model except the final layer that predicts the next word in the sequence.</p>
-<p>We can then use this encoder part as our base to build a toxic comment classification model.</p>
+<p>Once we have fine-tuned out LM to our downstream task, we save the <code>encoder</code> part of the model which portion of the model except the final layer that predicts the next word in the sequence.</p>
+<p>We can then use this<code>encoder</code> part, which is the portion that learns the language semantics, as our base to build a disaster tweets classification model.</p>
 
 </div>
 </div>
@@ -1837,7 +1837,7 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that we have a LM fine-tuned to our downstream NLP dataset we can use the encoder portion of the fine-tuned language model which is the part that learns the features of the language used in the downstream dataset as the base to build a text classifier for tasks such as sentiment analysis, spam detection, fraud detection, document classifcation etc.</p>
+<p>Now that we have a language model fine-tuned to our downstream NLP dataset we can use the encoder portion of the fine-tuned language model which is the part that learns the features of the language used in the downstream dataset as the base to build a text classifier for tasks such as sentiment analysis, spam detection, fraud detection, document classifcation etc.</p>
 
 </div>
 </div>
@@ -1853,8 +1853,9 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Fine-tuning a classifier is a very critical task in a transfer learning method. Overly aggressive fine-tuning can result in catastrophic forgetting and too cautious fine-tuning can lead to extremely slow convergence.</p>
-<p>To tackle this the paper introduces <strong>gradual unfreezing</strong> besides also using slanted triangular learning rates and discriminative fine-tuning</p>
+<p>Fine-tuning a classifier is a very critical task in a transfer learning method and is the main reason why transfer learning approaches failed until ULMFiT came along.</p>
+<p>Overly aggressive fine-tuning can result in <strong>catastrophic forgetting</strong> and too cautious fine-tuning can lead to extremely slow convergence.</p>
+<p>To tackle this problem, ULMFiT introduces a novel fine-tuning technique in <strong>gradual unfreezing</strong> besides also using <strong>slanted triangular learning rates</strong> and <strong>discriminative fine-tuning</strong> to successfully train a classifier using a pre-trained LM.</p>
 
 </div>
 </div>
@@ -1872,6 +1873,7 @@ The test set has 3263 records.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The idea behind gradual unfreezing is that fine-tuning a classifier on all layers can result in catastrophic forgetting and thus each layer staring form the las layer is trained one after the other by freezing all the lower layers and only training the layer in question.</p>
+<p>The paper empirically found that after training the last layer of the model with a learning rate of <code>lr</code>, the subsequent layers can be trained one after another by reducing <code>lr</code> by a factor of <code>2.6</code>.</p>
 
 </div>
 </div>
@@ -2201,6 +2203,10 @@ The test set has 3263 records.
 <h4 id="Training-the-classifier">
 <a class="anchor" href="#Training-the-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the classifier<a class="anchor-link" href="#Training-the-classifier"> </a>
 </h4>
+<blockquote>
+<p>Fine-tuning a cla</p>
+</blockquote>
+
 </div>
 </div>
 </div>
