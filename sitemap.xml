@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://harish3110.github.io/through-tinted-lenses/fastai/deep%20learning/2020/03/28/Relearning-how-to-learn-deep.html</loc>
+<loc>https://harish3110.github.io/through-tinted-lenses/fastai/2020/03/28/Relearning-how-to-learn-deep.html</loc>
 <lastmod>2020-03-28T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html</loc>
+<loc>https://harish3110.github.io/through-tinted-lenses/computer%20vision/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html</loc>
 <lastmod>2020-03-29T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -17,8 +17,12 @@
 <lastmod>2020-04-10T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://harish3110.github.io/through-tinted-lenses/workstation/hardware/setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html</loc>
+<loc>https://harish3110.github.io/through-tinted-lenses/workstation%20setup/2020/06/21/Introducing-Prometheus,-my-very-own-deep-learning-arsenal.html</loc>
 <lastmod>2020-06-21T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://harish3110.github.io/through-tinted-lenses/natural%20language%20processing/sentiment%20analysis/2020/06/27/Introduction-to-NLP-using-Fastai2.html</loc>
+<lastmod>2020-06-27T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://harish3110.github.io/through-tinted-lenses/about/</loc>
