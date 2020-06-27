@@ -612,6 +612,13 @@ The test set has 3263 records.
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-1:-Training-a-general-corpus-language-model">Step 1: Training a general corpus language model<a class="anchor-link" href="#Step-1:-Training-a-general-corpus-language-model"> </a></h3>
 </div>
 </div>
@@ -620,6 +627,7 @@ The test set has 3263 records.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A language model is first trained on a corpus of Wikipedia articles known as Wikitext-103 using a <strong>self-supervised approach</strong>, i.e. using the training labels in itself to train models, in this case training a LM to learn to predict the next word in a sequence. This resulting LM learns the semantics of the english language and captures general features in the different layers.</p>
 <p>This pretrained language model is trained on 28,595 Wikipedia articles and training process is very expensive and time consuming process and is luckily open-sourced in the Fastai library for us to use.</p>
+<hr />
 
 </div>
 </div>
@@ -981,6 +989,13 @@ The test set has 3263 records.
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-2:-Fine-tuning-pretrained-LM-to-downstream-dataset">Step 2: Fine-tuning pretrained LM to downstream dataset<a class="anchor-link" href="#Step-2:-Fine-tuning-pretrained-LM-to-downstream-dataset"> </a></h3>
