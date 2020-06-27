@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      20 min read
+      21 min read
     
 </span></p>
 
@@ -163,6 +163,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h4"><a href="#Gradual-Unfreezing">Gradual Unfreezing </a></li>
 <li class="toc-entry toc-h4"><a href="#Backpropagation-Throught-Time-for-Text-Classification-(BPT3C)">Backpropagation Throught Time for Text Classification (BPT3C) </a></li>
+<li class="toc-entry toc-h4"><a href="#Concat-Pooling">Concat Pooling </a></li>
 <li class="toc-entry toc-h4"><a href="#Creating-the-classifier-dataloader">Creating the classifier dataloader </a></li>
 <li class="toc-entry toc-h4"><a href="#Defining-the-learner">Defining the learner </a></li>
 <li class="toc-entry toc-h4"><a href="#Training-the-classifier">Training the classifier </a></li>
@@ -875,9 +876,9 @@ The test set has 3263 records.
 <h5 id="1.-Tokenization">
 <a class="anchor" href="#1.-Tokenization" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Tokenization<a class="anchor-link" href="#1.-Tokenization"> </a>
 </h5>
-<p>The first step is to gather all the unique 'tokens' in the corpus being used.</p>
-<p>A 'token' is defined by the person creating the language model based on the granularity level i.e. the smallest part of the text they would like to consider. In the simplest scenarion, a word can be considered as the token.</p>
-<p>So the idea is to get a list of all the unique words used in the general domain corpus(Wikipedia 103 dataset) and our downstream dataset(Disaster tweets dataset) to build a vocabulary for training our language model.</p>
+<p>The first step is to gather all the unique <code>tokens</code> in the corpus being used.</p>
+<p>A <code>token</code> can be defined in numerous ways depedning on the person creating the language model based on the granularity level i.e. the smallest part of the text they would like to consider. In the simplest scenario, a word can be considered as the token.</p>
+<p>So the idea is to get a list of all the unique words used in the general domain corpus(Wikipedia 103 dataset) and our added downstream dataset(Disaster tweets dataset) to build a vocabulary for training our language model.</p>
 
 </div>
 </div>
@@ -1248,7 +1249,8 @@ The test set has 3263 records.
 <h4 id="Discriminative-Fine-tuning">
 <a class="anchor" href="#Discriminative-Fine-tuning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discriminative Fine-tuning<a class="anchor-link" href="#Discriminative-Fine-tuning"> </a>
 </h4>
-<p>Since different layers of the model capture different types of information and thus they should be fine-tuned to different extents. This idea is same as the use of discriminative learning rates used in CV applications.</p>
+<p>Since different layers of the model capture different types of information and thus they should be fine-tuned to different extents.</p>
+<p>This idea is similar as the use of discriminative learning rates used in CV applications which I explained in detail in my previous <a href="https://harish3110.github.io/through-tinted-lenses/image%20classification/2020/04/10/Improving-baseline-model.html#Discriminative-learning-rates">post</a>.</p>
 
 </div>
 </div>
@@ -1259,8 +1261,16 @@ The test set has 3263 records.
 <h4 id="Slanted-Learning-Rates">
 <a class="anchor" href="#Slanted-Learning-Rates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slanted Learning Rates<a class="anchor-link" href="#Slanted-Learning-Rates"> </a>
 </h4>
-<p>The idea behing slanted learning rates is that for a pretrained language model to adpat/fine-tune itself to the downstream dataset, the fine-tuning process should ideally converge faster to asuitable region in the parameter space and thern refine its parameters there.</p>
+<p>The idea behind slanted learning rates is that for a pretrained language model to adpat/fine-tune itself to the downstream dataset, the fine-tuning process should ideally converge faster to asuitable region in the parameter space and thern refine its parameters there.</p>
 <p>So the slanted learning rates approach first linearly increases the learning rates for a short period and then linearly decays the learning rate slowly which is a modification of of Leslie Smith's traingular learning rate approache where the increase and decrease is almost the same.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://miro.medium.com/max/1096/1*QptmUluWXteT6oI5bD22rw.png" alt="" title="Slanted Triangular Learning Rates"></p>
 
 </div>
 </div>
@@ -1898,6 +1908,17 @@ The test set has 3263 records.
 <li>The gradients are back-propagated to the batches whose hidden states contributed to the final prediction. </li>
 <li>In practice, variable length back-propagation sequences are used. </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Concat-Pooling">
+<a class="anchor" href="#Concat-Pooling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concat Pooling<a class="anchor-link" href="#Concat-Pooling"> </a>
+</h4>
+<p>Since signals for classifying texts can exist anywhere and are not only limited to last word in the sequence, the ULMFiT approach also proposes to concatenate the last time step of the document by max-pooling and mean-pooling representations to provide more signal and better training</p>
 
 </div>
 </div>
