@@ -816,7 +816,7 @@ The test set has 3263 records.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A language model is first trained on a corpus of Wikipedia articles known as Wikitext-103 using a <strong>self-supervised approach</strong>, i.e. using the training labels in itself to train models, in this case training a LM to learn to predict the next word in a sequence. This resulting LM learns the semantics of the english language and captures general features in the different layers.</p>
-<p>This pretrained language model is trained on 28,595 Wikipedia articles and training process is very expensive and time consuming process and is luckily open-sourced in the Fastai library for us to use.</p>
+<p>This pretrained language model is trained on 28,595 Wikipedia articles and training process is very expensive and time consuming and is luckily open-sourced in the Fastai library for us to use.</p>
 
 </div>
 </div>
@@ -845,8 +845,8 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In my previous post, <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html#1.-Create-a-DataBlock:">Building an image classifier using Fastai V2</a> we looks at the datablock API of Fastai and we see that we ensure that all images used for training the image classifier model are resized to the same size in order to be able to collate them in the GPU.</p>
-<p>The same needs to be done for texts in order to train a language model. Whether it's the articles in the Wikipedia 103 dataset or tweets in disaster dataset are of different lengths and can be very long. Thus the tweets corpus i.e. the dataset needs to pre-processed correctly in order to train a neural network on text data.</p>
+<p>In my previous post, <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html#1.-Create-a-DataBlock:">Building an image classifier using Fastai V2</a> we look at the datablock API of Fastai and where we apply the <code>resize</code> transform that ensures that all images used for training the image classifier model are resized to the same dimensions in order to be able to collate them in the GPU.</p>
+<p>The same type of pre-processing needs to be done for texts in order to train a language model. Whether it's the articles in the Wikipedia 103 dataset or tweets in disaster dataset are of different lengths and can be very long. Thus the tweets corpus i.e. the dataset needs to pre-processed correctly in order to train a neural network on text data.</p>
 
 </div>
 </div>
