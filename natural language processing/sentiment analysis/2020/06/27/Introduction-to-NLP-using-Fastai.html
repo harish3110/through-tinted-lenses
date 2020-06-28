@@ -198,6 +198,15 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In continuation to my previous posts <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html">1</a>, <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html">2</a>, which delved into the domain of computer vision by building and fine-tuning an image classification model using Fastai, I would like to venture into the fascinating domain of Natural Language Processing using Fastai.</p>
+<p>For this post we'll be working on the <a href="https://www.kaggle.com/c/nlp-getting-started/overview">Real or Not? NLP with Disaster Tweets</a> competition dataset on Kaggle to build a text classifier to distinguish between normal tweets and tweets sent out during a natural disaster using the <a href="https://arxiv.org/abs/1801.06146">ULMFiT</a> approach and decoding this revolutionary paper that changed the NLP schenario for the better in the recent years.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -208,7 +217,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse</span>
 
 <span class="c1"># Installing and importing the necessary libraries </span>
 <span class="o">!</span>pip install fastai2 --quiet
@@ -231,8 +240,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In continuation to my previous posts <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/2020/03/29/Building-an-image-classifier-using-Fastai-V2.html">1</a>, <a href="https://harish3110.github.io/through-tinted-lenses/fastai/image%20classification/model%20fine-tuning/2020/04/10/Improving-baseline-model.html">2</a>, which delved into the domain of computer vision by building and fine-tuning an image classification model using Fastai, I would like to venture into the fascinating domain of Natural Language Processing using Fastai.</p>
-<p>For this post we'll be working on the <a href="https://www.kaggle.com/c/nlp-getting-started/overview">Real or Not? NLP with Disaster Tweets</a> competition dataset on Kaggle to build a text classifier to distinguish between normal tweets and tweets sent out during a natural disaster using the <a href="https://arxiv.org/abs/1801.06146">ULMFiT</a> approach and decoding this revolutionary paper that changed the NLP schenario for the better in the recent years.</p>
 <hr>
 
 </div>
@@ -673,85 +680,6 @@ Name: target, dtype: int64</pre>
 The test set has 3263 records.
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataset for fine-tuning language model which only needs the text data</span>
-
-<span class="n">df_lm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[[</span><span class="s1">'text'</span><span class="p">]]</span>
-<span class="n">df_lm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>text</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Forest fire near La Ronge Sask. Canada</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>All residents asked to 'shelter in place' are being notified by officers. No other evacuation or shelter in place orders are expected</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>13,000 people receive #wildfires evacuation orders in California</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Just got sent this photo from Ruby #Alaska as smoke from #wildfires pours into a school</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -1288,6 +1216,95 @@ The test set has 3263 records.
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataset for fine-tuning language model which only needs the text data</span>
+
+<span class="n">df_lm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[[</span><span class="s1">'text'</span><span class="p">]]</span>
+<span class="n">df_lm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Our Deeds are the Reason of this #earthquake May ALLAH Forgive us all</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Forest fire near La Ronge Sask. Canada</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>All residents asked to 'shelter in place' are being notified by officers. No other evacuation or shelter in place orders are expected</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>13,000 people receive #wildfires evacuation orders in California</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Just got sent this photo from Ruby #Alaska as smoke from #wildfires pours into a school</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><strong><em>Note:</em></strong> An important trick used in creating a dataloader here is that we use all the data available to us i.e train and test data. In case we had a dataset with unlabeled reviews we could also use that to fine-tune the pre-trained model better since this step doesn't need labels and is self-supervised.</p>
+<hr>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1319,16 +1336,6 @@ The test set has 3263 records.
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong><em>Note:</em></strong> An important trick used in creating a dataloader here is that we use all the data available to us i.e train and test data. In case we had a dataset with unlabeled reviews we could also use that to fine-tune the pre-trained model better since this step doesn't need labels and is self-supervised.</p>
-<hr>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2204,7 +2211,7 @@ The test set has 3263 records.
 <a class="anchor" href="#Training-the-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the classifier<a class="anchor-link" href="#Training-the-classifier"> </a>
 </h4>
 <blockquote>
-<p>Fine-tuning a cla</p>
+<p>Fine-tuning a text classifier using gradual unfreezing, slanted learning rates and discriminating learning techniques.</p>
 </blockquote>
 
 </div>
