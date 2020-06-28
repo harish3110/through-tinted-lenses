@@ -150,7 +150,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Step-2:-Fine-tuning-pretrained-LM-to-downstream-dataset">Step 2: Fine-tuning pretrained LM to downstream dataset </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#Discriminative-Fine-tuning">Discriminative Fine-tuning </a></li>
-<li class="toc-entry toc-h4"><a href="#Slanted-Learning-Rates">Slanted Learning Rates </a></li>
+<li class="toc-entry toc-h4"><a href="#Slanted-Triangular-Learning-Rates">Slanted Triangular Learning Rates </a></li>
 <li class="toc-entry toc-h4"><a href="#Creating-a-dataloader">Creating a dataloader </a></li>
 <li class="toc-entry toc-h4"><a href="#Fine-tuning-the-language-model">Fine-tuning the language model </a>
 <ul>
@@ -281,7 +281,7 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>ref                                                deadline             category            reward  teamCount  userHasEntered  
 -------------------------------------------------  -------------------  ---------------  ---------  ---------  --------------  
-nlp-getting-started                                2030-01-01 00:00:00  Getting Started      Kudos       1577            True  
+nlp-getting-started                                2030-01-01 00:00:00  Getting Started      Kudos       1557            True  
 trec-covid-information-retrieval                   2020-06-03 11:00:00  Research             Kudos         19           False  
 google-quest-challenge                             2020-02-10 23:59:00  Featured           $25,000       1571           False  
 jigsaw-unintended-bias-in-toxicity-classification  2019-07-18 19:35:00  Featured           $65,000       3165           False  
@@ -314,6 +314,7 @@ data-science-for-good-city-of-los-angeles          2019-06-21 23:59:00  Analytic
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_path</span> <span class="o">=</span> <span class="s1">'/home/harish3110/Desktop/datasets/'</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="s1">'nlp-getting-started'</span>
 </pre></div>
 
     </div>
@@ -331,7 +332,6 @@ data-science-for-good-city-of-los-angeles          2019-06-21 23:59:00  Analytic
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> {dataset_path}
-<span class="n">dataset</span> <span class="o">=</span> <span class="s1">'nlp-getting-started'</span>
 
 <span class="c1"># Creating a folder for the dataset</span>
 <span class="o">!</span>mkdir <span class="o">{</span>dataset<span class="o">}</span>
@@ -354,8 +354,8 @@ data-science-for-good-city-of-los-angeles          2019-06-21 23:59:00  Analytic
 <pre>/home/harish3110/Desktop/datasets
 /home/harish3110/Desktop/datasets/nlp-getting-started
 Downloading nlp-getting-started.zip to /home/harish3110/Desktop/datasets/nlp-getting-started
-100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.08MB/s]
-100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.08MB/s]
+100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 3.26MB/s]
+100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 3.25MB/s]
 </pre>
 </div>
 </div>
@@ -912,9 +912,27 @@ The test set has 3263 records.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Setting up a tokenizer on the entire dataframe 'df_lm'</span>
-<span class="n">tok</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="o">.</span><span class="n">from_df</span><span class="p">(</span><span class="n">df_lm</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txts</span> <span class="o">=</span> <span class="n">L</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">train</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Setting up a tokenizer on the entire dataframe 'train'</span>
+<span class="n">tok</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="o">.</span><span class="n">from_df</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 <span class="n">tok</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+
 <span class="n">toks</span> <span class="o">=</span> <span class="n">txts</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">tok</span><span class="p">)</span>
 <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
@@ -968,39 +986,6 @@ The test set has 3263 records.
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tok</span><span class="o">.</span><span class="n">encodes</span><span class="p">(</span><span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(#21) ['xxbos','xxmaj','our','xxmaj','deeds','are','the','xxmaj','reason','of'...]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1205,8 +1190,8 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Slanted-Learning-Rates">
-<a class="anchor" href="#Slanted-Learning-Rates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slanted Learning Rates<a class="anchor-link" href="#Slanted-Learning-Rates"> </a>
+<h4 id="Slanted-Triangular-Learning-Rates">
+<a class="anchor" href="#Slanted-Triangular-Learning-Rates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slanted Triangular Learning Rates<a class="anchor-link" href="#Slanted-Triangular-Learning-Rates"> </a>
 </h4>
 <p>The idea behind slanted learning rates is that for a pretrained language model to adpat/fine-tune itself to the downstream dataset, the fine-tuning process should ideally converge faster to asuitable region in the parameter space and thern refine its parameters there.</p>
 <p>So the slanted learning rates approach first linearly increases the learning rates for a short period and then linearly decays the learning rate slowly which is a modification of of Leslie Smith's traingular learning rate approache where the increase and decrease is almost the same.</p>
@@ -1433,18 +1418,18 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <th>0</th>
-      <td>xxbos xxunk i agree ! i did n't know you had moved to xxmaj xxunk . i woke up to your report &amp; &amp; thought my favorite worlds ( xxunk - xxunk ) collided . xxbos xxunk xxunk xxmaj except we do n't know who started the riot or if it even makes sense to credit any xxunk individuals … xxbos xxunk is like [ cash xxup register ] [ buildings xxup</td>
-      <td>xxunk i agree ! i did n't know you had moved to xxmaj xxunk . i woke up to your report &amp; &amp; thought my favorite worlds ( xxunk - xxunk ) collided . xxbos xxunk xxunk xxmaj except we do n't know who started the riot or if it even makes sense to credit any xxunk individuals … xxbos xxunk is like [ cash xxup register ] [ buildings xxup burning</td>
+      <td>xxbos xxmaj and please do n't flood poor xxunk 's mentions . xxmaj he 's put in his work ! xxbos xxunk xxunk xxmaj europe and xxunk with open arms . xxmaj gets destroyed after two weeks in america . xxmaj there 's a lesson to be learned here . xxbos xxmaj what if your xxunk were hit by the xxmaj hiroshima atomic bomb ? http : / / t.co / xxunk</td>
+      <td>xxmaj and please do n't flood poor xxunk 's mentions . xxmaj he 's put in his work ! xxbos xxunk xxunk xxmaj europe and xxunk with open arms . xxmaj gets destroyed after two weeks in america . xxmaj there 's a lesson to be learned here . xxbos xxmaj what if your xxunk were hit by the xxmaj hiroshima atomic bomb ? http : / / t.co / xxunk #</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>xxmaj thunder by xxup xxunk xxmaj quick on xxmaj amazon xxmaj kindle and soon in xxup print at xxmaj amazon xxmaj books via xxmaj create … http : / / t.co / xxunk via xxunk xxbos xxmaj xxunk xxmaj xxunk w / xxmaj xxunk xxmaj st * * trfc collision - no xxmaj inj * * http : / / t.co / xxunk xxbos xxup ig : http : / / t.co</td>
-      <td>thunder by xxup xxunk xxmaj quick on xxmaj amazon xxmaj kindle and soon in xxup print at xxmaj amazon xxmaj books via xxmaj create … http : / / t.co / xxunk via xxunk xxbos xxmaj xxunk xxmaj xxunk w / xxmaj xxunk xxmaj st * * trfc collision - no xxmaj inj * * http : / / t.co / xxunk xxbos xxup ig : http : / / t.co /</td>
+      <td>now xxmaj i 'm xxunk lol xxbos xxmaj my xxmaj lil brother has a crush on xxunk xxrep 6 ? xxbos xxunk xxunk the xxunk of all xxunk of something ; obliteration . xxbos xxmaj sinjar xxmaj massacre xxmaj yazidis xxmaj blast xxmaj lack of xxmaj action xxmaj over xxmaj hostages http : / / t.co / xxunk xxbos xxmaj storm damage reported in xxmaj west xxmaj tennessee http : / /</td>
+      <td>xxmaj i 'm xxunk lol xxbos xxmaj my xxmaj lil brother has a crush on xxunk xxrep 6 ? xxbos xxunk xxunk the xxunk of all xxunk of something ; obliteration . xxbos xxmaj sinjar xxmaj massacre xxmaj yazidis xxmaj blast xxmaj lack of xxmaj action xxmaj over xxmaj hostages http : / / t.co / xxunk xxbos xxmaj storm damage reported in xxmaj west xxmaj tennessee http : / / t.co</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>&lt; https : / / t.co / xxunk xxbos xxmaj in my experience if you 're always angry and critical as a xxunk you are in xxunk danger of going off the xxunk . 1 / xxbos xxmaj how can we help save a beautiful town in xxmaj ontario from destruction by a power plant xxunk ? \n http : / / t.co / xxunk xxbos xxmaj this xxmaj govt of xxmaj</td>
-      <td>https : / / t.co / xxunk xxbos xxmaj in my experience if you 're always angry and critical as a xxunk you are in xxunk danger of going off the xxunk . 1 / xxbos xxmaj how can we help save a beautiful town in xxmaj ontario from destruction by a power plant xxunk ? \n http : / / t.co / xxunk xxbos xxmaj this xxmaj govt of xxmaj xxunk</td>
+      <td>&amp; &amp; wanted to sing it at my church but it 's not in spanish so i xxunk it . http : / / t.co / xxunk xxbos i will stay drowning till you watch # xxunk http : / / t.co / xxunk http : / / t.co / xxunk xxbos xxmaj moved on to ' bang xxmaj bang xxmaj rock and xxmaj roll ' by xxunk _ . xxmaj it</td>
+      <td>&amp; wanted to sing it at my church but it 's not in spanish so i xxunk it . http : / / t.co / xxunk xxbos i will stay drowning till you watch # xxunk http : / / t.co / xxunk http : / / t.co / xxunk xxbos xxmaj moved on to ' bang xxmaj bang xxmaj rock and xxmaj roll ' by xxunk _ . xxmaj it 's</td>
     </tr>
   </tbody>
 </table>
@@ -1467,7 +1452,7 @@ The test set has 3263 records.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Saving the dataloader for fast use in the future</span>
 
-<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dls_lm</span><span class="p">,</span> <span class="s1">'disaster_tweets_dls_lm.pkl'</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dls_lm</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="s1">'disaster_tweets_dls_lm.pkl'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1486,7 +1471,7 @@ The test set has 3263 records.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To load the Dataloaders in the future</span>
 
-<span class="n">dls_lm</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'disaster_tweets_dls_lm.pkl'</span><span class="p">)</span>
+<span class="n">dls_lm</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'disaster_tweets_dls_lm.pkl'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1720,10 +1705,10 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>5.023802</td>
-      <td>3.831925</td>
-      <td>0.369296</td>
-      <td>46.151302</td>
+      <td>4.982144</td>
+      <td>3.736326</td>
+      <td>0.380301</td>
+      <td>41.943615</td>
       <td>00:08</td>
     </tr>
   </tbody>
@@ -1750,42 +1735,42 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>3.945078</td>
-      <td>3.558439</td>
-      <td>0.395056</td>
-      <td>35.108360</td>
+      <td>3.912532</td>
+      <td>3.460809</td>
+      <td>0.410621</td>
+      <td>31.842741</td>
       <td>00:08</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>3.691576</td>
-      <td>3.303960</td>
-      <td>0.427633</td>
-      <td>27.220207</td>
+      <td>3.649338</td>
+      <td>3.220508</td>
+      <td>0.438120</td>
+      <td>25.040840</td>
       <td>00:08</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>3.473612</td>
-      <td>3.195056</td>
-      <td>0.441754</td>
-      <td>24.411539</td>
+      <td>3.433742</td>
+      <td>3.113808</td>
+      <td>0.452660</td>
+      <td>22.506578</td>
       <td>00:08</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>3.313620</td>
-      <td>3.149503</td>
-      <td>0.447472</td>
-      <td>23.324463</td>
+      <td>3.285937</td>
+      <td>3.066288</td>
+      <td>0.459294</td>
+      <td>21.462076</td>
       <td>00:08</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>3.224377</td>
-      <td>3.142539</td>
-      <td>0.448976</td>
-      <td>23.162609</td>
+      <td>3.205285</td>
+      <td>3.059417</td>
+      <td>0.460876</td>
+      <td>21.315117</td>
       <td>00:08</td>
     </tr>
   </tbody>
@@ -2033,13 +2018,13 @@ The test set has 3263 records.
     </tr>
     <tr>
       <th>1</th>
-      <td>xxbos xxup info xxup s. xxup wnd : xxunk / 6 . xxup xxunk : xxup xxunk xxup xxunk . xxup exp xxup inst xxup apch . xxup rwy 05 . xxup curfew xxup in xxup oper xxup until 2030 xxup z. xxup taxiways xxup foxtrot 5 &amp; &amp; xxup foxtrot 6 xxup navbl . xxup tmp : 10 .</td>
+      <td>xxbos xxup info xxup u. xxup xxunk : xxup xxunk xxup xxunk . xxup exp xxup inst xxup apch . xxup rwy 05 . xxup curfew xxup in xxup oper xxup until 2030 xxup z. xxup taxiways xxup foxtrot 5 &amp; &amp; xxup foxtrot 6 xxup navbl . xxup tmp : 10 . xxup wnd : xxunk / 6 .</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>xxbos xxup info xxup u. xxup xxunk : xxup xxunk xxup xxunk . xxup exp xxup inst xxup apch . xxup rwy 05 . xxup curfew xxup in xxup oper xxup until 2030 xxup z. xxup taxiways xxup foxtrot 5 &amp; &amp; xxup foxtrot 6 xxup navbl . xxup tmp : 10 . xxup wnd : xxunk / 6 .</td>
-      <td>0</td>
+      <td>xxbos xxmaj no # news of # hostages in # xxmaj libya \n\n http : / / t.co / xxunk \n\n▁ # xxmaj india # terrorism # xxmaj africa # xxup ap # xxup ts # xxup nri # xxmaj news # xxup trs # xxup tdp # xxup bjp http : / / t.co / xxunk</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -2086,6 +2071,25 @@ The test set has 3263 records.
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Saving the dataloader for fast use in the future</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">dls_lm</span><span class="p">,</span> <span class="n">path</span><span class="o">/</span><span class="s1">'disaster_tweets_dls_cls.pkl'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2118,7 +2122,7 @@ The test set has 3263 records.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;fastai2.text.learner.TextLearner at 0x7f32c7f08e10&gt;</pre>
+<pre>&lt;fastai2.text.learner.TextLearner at 0x7faf60159190&gt;</pre>
 </div>
 
 </div>
@@ -2139,7 +2143,7 @@ The test set has 3263 records.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse</span>
 <span class="n">learn</span><span class="o">.</span><span class="n">model</span>
 </pre></div>
 
@@ -2257,10 +2261,10 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.650071</td>
-      <td>0.471966</td>
-      <td>0.777267</td>
-      <td>0.706494</td>
+      <td>0.644347</td>
+      <td>0.452562</td>
+      <td>0.789750</td>
+      <td>0.751938</td>
       <td>00:02</td>
     </tr>
   </tbody>
@@ -2313,10 +2317,10 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.564487</td>
-      <td>0.442714</td>
-      <td>0.796321</td>
-      <td>0.752000</td>
+      <td>0.570971</td>
+      <td>0.440099</td>
+      <td>0.792378</td>
+      <td>0.741408</td>
       <td>00:02</td>
     </tr>
   </tbody>
@@ -2367,11 +2371,11 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.500388</td>
-      <td>0.430654</td>
-      <td>0.801577</td>
-      <td>0.758786</td>
-      <td>00:02</td>
+      <td>0.501447</td>
+      <td>0.423622</td>
+      <td>0.802891</td>
+      <td>0.750416</td>
+      <td>00:03</td>
     </tr>
   </tbody>
 </table>
@@ -2421,18 +2425,18 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <td>0</td>
-      <td>0.449139</td>
-      <td>0.438118</td>
-      <td>0.796978</td>
-      <td>0.756117</td>
+      <td>0.441076</td>
+      <td>0.433690</td>
+      <td>0.802234</td>
+      <td>0.758621</td>
       <td>00:03</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>0.426530</td>
-      <td>0.435094</td>
-      <td>0.800920</td>
-      <td>0.772352</td>
+      <td>0.416924</td>
+      <td>0.425634</td>
+      <td>0.802891</td>
+      <td>0.762282</td>
       <td>00:03</td>
     </tr>
   </tbody>
@@ -2441,6 +2445,23 @@ The test set has 3263 records.
 
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">'final_model'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -2471,7 +2492,7 @@ The test set has 3263 records.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sample_submission.csv'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'sample_submission.csv'</span><span class="p">)</span>
 <span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -2620,7 +2641,7 @@ The test set has 3263 records.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0.07068779, 0.9293122 ], dtype=float32)</pre>
+<pre>array([0.13034077, 0.86965925], dtype=float32)</pre>
 </div>
 
 </div>
@@ -2777,6 +2798,38 @@ The test set has 3263 records.
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>kaggle competitions submit -c nlp-getting-started -f submission.csv -m <span class="s2">"ULMFiT Submission 1"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100%|██████████████████████████████████████| 22.2k/22.2k [00:08&lt;00:00, 2.61kB/s]
+403 - Your team has used its submission allowance (5 of 5). This resets at midnight UTC (17 hours from now).
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
