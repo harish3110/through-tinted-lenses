@@ -313,7 +313,24 @@ data-science-for-good-city-of-los-angeles          2019-06-21 23:59:00  Analytic
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> ~/Desktop/datasets
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_path</span> <span class="o">=</span> <span class="s1">'/home/harish3110/Desktop/datasets/'</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> {dataset_path}
 <span class="n">dataset</span> <span class="o">=</span> <span class="s1">'nlp-getting-started'</span>
 
 <span class="c1"># Creating a folder for the dataset</span>
@@ -337,8 +354,8 @@ data-science-for-good-city-of-los-angeles          2019-06-21 23:59:00  Analytic
 <pre>/home/harish3110/Desktop/datasets
 /home/harish3110/Desktop/datasets/nlp-getting-started
 Downloading nlp-getting-started.zip to /home/harish3110/Desktop/datasets/nlp-getting-started
-100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.11MB/s]
-100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.10MB/s]
+100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.08MB/s]
+100%|████████████████████████████████████████| 593k/593k [00:00&lt;00:00, 2.08MB/s]
 </pre>
 </div>
 </div>
@@ -393,9 +410,9 @@ Downloading nlp-getting-started.zip to /home/harish3110/Desktop/datasets/nlp-get
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># View the files</span>
-
-<span class="o">!</span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">dataset_path</span><span class="si">}{</span><span class="n">dataset</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">path</span>
+<span class="n">path</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -407,10 +424,12 @@ Downloading nlp-getting-started.zip to /home/harish3110/Desktop/datasets/nlp-get
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>sample_submission.csv  test.csv  train.csv
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(#3) [Path('test.csv'),Path('sample_submission.csv'),Path('train.csv')]</pre>
 </div>
+
 </div>
 
 </div>
@@ -426,8 +445,8 @@ Downloading nlp-getting-started.zip to /home/harish3110/Desktop/datasets/nlp-get
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'train.csv'</span><span class="p">)</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'test.csv'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'train.csv'</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'test.csv'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1414,18 +1433,18 @@ The test set has 3263 records.
   <tbody>
     <tr>
       <th>0</th>
-      <td>xxbos xxmaj put the xxup right person up on the block # xxmaj shelli xxrep 3 ? xxmaj the sense of xxunk is ridiculous . # xxup bb17 . xxbos xxunk xxup dw was on his way to a better career than xxmaj xxunk and that was n't derailed until 2014 . xxmaj shame . xxbos xxmaj wreckage ' conclusively xxmaj confirmed ' as xxmaj from xxup mh370 : xxmaj malaysia xxup pm : xxmaj investigators and the families of</td>
-      <td>xxmaj put the xxup right person up on the block # xxmaj shelli xxrep 3 ? xxmaj the sense of xxunk is ridiculous . # xxup bb17 . xxbos xxunk xxup dw was on his way to a better career than xxmaj xxunk and that was n't derailed until 2014 . xxmaj shame . xxbos xxmaj wreckage ' conclusively xxmaj confirmed ' as xxmaj from xxup mh370 : xxmaj malaysia xxup pm : xxmaj investigators and the families of those</td>
+      <td>xxbos xxunk i agree ! i did n't know you had moved to xxmaj xxunk . i woke up to your report &amp; &amp; thought my favorite worlds ( xxunk - xxunk ) collided . xxbos xxunk xxunk xxmaj except we do n't know who started the riot or if it even makes sense to credit any xxunk individuals … xxbos xxunk is like [ cash xxup register ] [ buildings xxup</td>
+      <td>xxunk i agree ! i did n't know you had moved to xxmaj xxunk . i woke up to your report &amp; &amp; thought my favorite worlds ( xxunk - xxunk ) collided . xxbos xxunk xxunk xxmaj except we do n't know who started the riot or if it even makes sense to credit any xxunk individuals … xxbos xxunk is like [ cash xxup register ] [ buildings xxup burning</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>xxmaj under a xxmaj minute http : / / t.co / xxunk xxbos xxmaj correction : xxmaj tent xxmaj collapse xxmaj story http : / / t.co / xxunk xxbos xxunk xxmaj xxunk not getting rid me until every last drop of life has gone … i xxunk into burning buildings because all xxmaj life matters . xxmaj xxunk xxbos xxmaj suicide bomber xxunk in xxmaj saudi xxmaj arabia mosque 17 reportedly killed http : / / t.co / xxunk</td>
-      <td>under a xxmaj minute http : / / t.co / xxunk xxbos xxmaj correction : xxmaj tent xxmaj collapse xxmaj story http : / / t.co / xxunk xxbos xxunk xxmaj xxunk not getting rid me until every last drop of life has gone … i xxunk into burning buildings because all xxmaj life matters . xxmaj xxunk xxbos xxmaj suicide bomber xxunk in xxmaj saudi xxmaj arabia mosque 17 reportedly killed http : / / t.co / xxunk xxbos</td>
+      <td>xxmaj thunder by xxup xxunk xxmaj quick on xxmaj amazon xxmaj kindle and soon in xxup print at xxmaj amazon xxmaj books via xxmaj create … http : / / t.co / xxunk via xxunk xxbos xxmaj xxunk xxmaj xxunk w / xxmaj xxunk xxmaj st * * trfc collision - no xxmaj inj * * http : / / t.co / xxunk xxbos xxup ig : http : / / t.co</td>
+      <td>thunder by xxup xxunk xxmaj quick on xxmaj amazon xxmaj kindle and soon in xxup print at xxmaj amazon xxmaj books via xxmaj create … http : / / t.co / xxunk via xxunk xxbos xxmaj xxunk xxmaj xxunk w / xxmaj xxunk xxmaj st * * trfc collision - no xxmaj inj * * http : / / t.co / xxunk xxbos xxup ig : http : / / t.co /</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>our true xxmaj hero 's ! ! xxmaj besides your music xxbos xxmaj if abortion is murder then xxunk are xxunk and xxunk is mass genocide . xxbos xxmaj fatality ! xxbos xxmaj interesting : xxup mh370 : xxmaj aircraft debris found on xxmaj la xxmaj reunion is from missing xxmaj malaysia xxmaj airlines … - xxup abc … http : / / t.co / xxunk xxmaj please xxup rt xxbos xxmaj rly tragedy in xxup mp : xxmaj some</td>
-      <td>true xxmaj hero 's ! ! xxmaj besides your music xxbos xxmaj if abortion is murder then xxunk are xxunk and xxunk is mass genocide . xxbos xxmaj fatality ! xxbos xxmaj interesting : xxup mh370 : xxmaj aircraft debris found on xxmaj la xxmaj reunion is from missing xxmaj malaysia xxmaj airlines … - xxup abc … http : / / t.co / xxunk xxmaj please xxup rt xxbos xxmaj rly tragedy in xxup mp : xxmaj some live</td>
+      <td>&lt; https : / / t.co / xxunk xxbos xxmaj in my experience if you 're always angry and critical as a xxunk you are in xxunk danger of going off the xxunk . 1 / xxbos xxmaj how can we help save a beautiful town in xxmaj ontario from destruction by a power plant xxunk ? \n http : / / t.co / xxunk xxbos xxmaj this xxmaj govt of xxmaj</td>
+      <td>https : / / t.co / xxunk xxbos xxmaj in my experience if you 're always angry and critical as a xxunk you are in xxunk danger of going off the xxunk . 1 / xxbos xxmaj how can we help save a beautiful town in xxmaj ontario from destruction by a power plant xxunk ? \n http : / / t.co / xxunk xxbos xxmaj this xxmaj govt of xxmaj xxunk</td>
     </tr>
   </tbody>
 </table>
@@ -1474,28 +1493,13 @@ The test set has 3263 records.
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;fastai2.data.core.DataLoaders at 0x7f331d425510&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Fine-tuning-the-language-model">
 <a class="anchor" href="#Fine-tuning-the-language-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fine-tuning the language model<a class="anchor-link" href="#Fine-tuning-the-language-model"> </a>
 </h4>
@@ -2207,6 +2211,7 @@ The test set has 3263 records.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 <h4 id="Training-the-classifier">
 <a class="anchor" href="#Training-the-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the classifier<a class="anchor-link" href="#Training-the-classifier"> </a>
 </h4>
@@ -2768,7 +2773,7 @@ The test set has 3263 records.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'~/Desktop/my_fastai_notebooks/Text/submission.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'submission.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
