@@ -6,8 +6,6 @@ permalink: /about/
 
 Hi there, Harish here!
 
-Hi there, Harish here!
-
 I have a background in electronics and have embarked on a life-long journey in learning to make machines think like humans. I’m inherently extremely lazy and am thus obsessed with automating my work and building productivity systems that do my work for me. In addition, I’m a bibliophile, love music and playing the guitar, a deranged Liverpool fan and trying my best to be fluent in multiple foreign languages(French and German for now!:))
 
 Follow along through my machine learning journey as I try to unveil the science behind developing cognition in machines through tinted lenses! :)
