@@ -17,6 +17,8 @@ Love my work and think we could collaborate on something together? Feel free to 
 
 You can also check out my professional resume [here](https://drive.google.com/file/d/1p3An689RdQWi4nSwicn-7rO4LOH8G9Av/view?usp=sharing).
 
+---
+
 ![]({{site.baseurl}}/images/profile_pic.jpg)
 
 FYI: Unfortunately, I haven't passed the turing test yet! ;)
