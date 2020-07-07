@@ -3,6 +3,7 @@ toc: false
 layout: post
 description: Using Fastai to become a state-of-the-art deep learning practitioner!
 categories: [Fastai]
+image: images/ttl_small.png
 title: Relearning how to learn, deep.
 
 ---
