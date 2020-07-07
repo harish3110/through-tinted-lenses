@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Harish (Me)
+title: About Me
 permalink: /about/
 ---
 
