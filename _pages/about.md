@@ -23,4 +23,7 @@ You can also check out my professional resume [here](https://drive.google.com/fi
 
 FYI: Unfortunately, I haven't passed the Turing test yet! ;)
 
+
+![]({{site.baseurl}}/images/ttl_small.png "Through Tinted Lenses")
+
 ---
