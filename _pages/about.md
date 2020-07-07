@@ -10,7 +10,7 @@ I have a background in electronics and have embarked on a self-learning journey 
 
 Follow along through my machine learning journey as I try to unveil the science behind developing cognition in machines through tinted lenses! :)
 
-I love discussing all things ML, productivity hacks, football, or advancement in technology in general, so give me a shout on @[@harish3110](https://twitter.com/harish3110) on Twitter. You can also check out the rest of my work tinkering on ML topics on my [Github](https://github.com/harish3110).
+I love discussing all things ML, productivity hacks, football, or advancement in technology in general, so give me a shout on [@harish3110](https://twitter.com/harish3110) on Twitter. You can also check out the rest of my work tinkering on ML topics on my [Github](https://github.com/harish3110).
 
 ---
 Love my work and think we could collaborate on something together? Feel free to drop me an email at <harish3110@gmail.com> or reach out to me on [Twitter](https://twitter.com/harish3110).
