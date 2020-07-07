@@ -13,7 +13,7 @@ Follow along through my machine learning journey as I try to unveil the science 
 I love discussing all things ML, productivity hacks, football or advancement in technology in general, so give me a shout on [@harish3110](https://twitter.com/harish3110) on Twitter. You can also check out the rest of my work tinkering on ML topics on my [Github](https://github.com/harish3110).
 
 ---
-Love my work and think we could collaborate on something together? Feel free to [drop me an email](harish3110@gmail.com) or reach out to me on [Twitter](https://twitter.com/harish3110).
+Love my work and think we could collaborate on something together? Feel free to drop me an email at harish3110@gmail.com or reach out to me on [Twitter](https://twitter.com/harish3110).
 
 You can also check out my Resume [here](https://drive.google.com/file/d/1p3An689RdQWi4nSwicn-7rO4LOH8G9Av/view?usp=sharing)
 
