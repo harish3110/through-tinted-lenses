@@ -15,7 +15,7 @@ I love discussing all things ML, productivity hacks, football or advancement in 
 ---
 Love my work and think we could collaborate on something together? Feel free to drop me an email at harish3110@gmail.com or reach out to me on [Twitter](https://twitter.com/harish3110).
 
-You can also check out my Resume [here](https://drive.google.com/file/d/1p3An689RdQWi4nSwicn-7rO4LOH8G9Av/view?usp=sharing)
+You can also check out my professional resume [here](https://drive.google.com/file/d/1p3An689RdQWi4nSwicn-7rO4LOH8G9Av/view?usp=sharing).
 
 ![]({{site.baseurl}}/images/profile_pic.jpg)
 
