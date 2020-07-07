@@ -1,13 +1,23 @@
 ---
 layout: page
-title: About Me
+title: Harish (Me)
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Hi there, Harish here!
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+I have a background in electronics and have embarked on a life-long journey in learning to make machines think like humans. I'm inherently extremely lazy and am thus obsessed in automating my work and building productivity systems that do my work for me. In addition, I'm a bibliophile, love music and playing the guitar, a deranged Liverpool fan and trying my best to be fluent in multiple foreign languages(French and German for now!). 
 
+Follow along through my machine learning journey as I try to unveil the science behind developing cognition in machines through tinted lenses! :)
 
+I love discussing all things ML, productivity hacks, football or advancement in technology in general, so give me a shout on [@harish3110](https://twitter.com/harish3110) on Twitter. You can also check out the rest of my work tinkering on ML topics on my [Github](https://github.com/harish3110).
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+---
+Love my work and think we could collaborate on something together? Feel free to [drop me an email](harish3110@gmail.com) or reach out to me on [Twitter](https://twitter.com/harish3110).
+
+You can also check out my Resume [here](https://drive.google.com/file/d/1p3An689RdQWi4nSwicn-7rO4LOH8G9Av/view?usp=sharing)
+
+![]({{site.baseurl}}/images/profile_pic.jpg)
+
+FYI: Unfortunately, I haven't passed the turing test yet! ;)
+
