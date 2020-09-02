@@ -19,7 +19,22 @@
 <script type="application/ld+json">
 {"author":{"@type":"Person","name":"Harish Vadlamani"},"description":"Understanding the functionalities of the Fastai core class L","headline":"A look at Fastai’s ‘L’ data structure","dateModified":"2020-04-03T00:00:00-05:00","datePublished":"2020-04-03T00:00:00-05:00","@type":"BlogPosting","image":"https://harish3110.github.io/through-tinted-lenses/images/ttl_small.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://harish3110.github.io/through-tinted-lenses/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html"},"url":"https://harish3110.github.io/through-tinted-lenses/data%20structures/2020/04/03/A-look-at-the-L-Data-Structure-in-Fastai.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/ttl_small.png"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<link rel="stylesheet" href="/through-tinted-lenses/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-171791478-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/through-tinted-lenses/images/ttl_small.png"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>A look at Fastai’s ‘L’ data structure | Through Tinted Lenses</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="A look at Fastai’s ‘L’ data structure" />
@@ -38,7 +53,13 @@
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://harish3110.github.io/through-tinted-lenses/feed.xml" title="Through Tinted Lenses" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-171791478-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
 
 <script>
 function wrap_img(fn) {
@@ -206,7 +227,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastcore.imports</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
