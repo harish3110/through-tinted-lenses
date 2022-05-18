@@ -14,7 +14,7 @@ I love discussing all things ML, productivity hacks, football, or advancement in
 
 ---
 
-![]({{site.baseurl}}/images/profile_pic.jpg)
+![]({{site.baseurl}}/images/profile.jpg)
 
 ---
 Love my work and think we could collaborate on something together? Feel free to drop me an email at <harish3110@gmail.com> or reach out to me on [Twitter](https://twitter.com/harish3110).
