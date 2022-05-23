@@ -61,7 +61,7 @@ Being quarantined, I find this time to be the best opportunity to start my blog 
 
 The course is currently private but will be made public and free for all like all courses by fast.ai. Until then, and hopefully, even then, I hope I can help wade students through the mazes of Deep Learning, Fast.ai style! So let's get into it!
 
-In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/fastai/classification/2020/03/29/Getting-started-with-Fastai-V2.html), I will provide an introduction to the Fastai v2 library and build an image classifier on a well-known dataset.
+In my upcoming blog [post](https://harish3110.github.io/through-tinted-lenses/computer%20vision/image%20classification/2021/09/29/Building-an-image-classifier-using-Fastai.html), I will provide an introduction to the Fastai v2 library and build an image classifier on a well-known dataset.
 
 > "Education is the kindling of a flame, not the filling of a vessel."
 ― Socrates
